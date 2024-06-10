@@ -1,0 +1,42 @@
+\begin{claim}
+$\to E$ rule is sound in first-order predicate logic.
+\end{claim}
+\begin{proof}
+\begin{prooftree*}
+\hypo{X}
+\infer[no rule]1{\Pi_1}
+\infer[no rule]1{A \to B}
+\hypo{Y}
+\infer[no rule]1{\Pi_2}
+\infer[no rule]1{A}
+\infer2[\ce]{B}
+\end{prooftree*}
+If $X \vDash A \to B$ and $Y \vDash A$, then then in any model where each member of $X$, $Y$ is true, so are $A \to B$ and $A$. We know that $A \to B$ is true in $\mathfrak{M}$ iff $A$ is not true in $\mathfrak{M}$ or $B$ is true in $\mathfrak{M}$. Since $A$ is already true, $B$ has to be true. It follows that $X, Y \vDash B$.
+\end{proof}
+Here we use the fact that if $I(A \to B, \alpha) = 1$ and $I(A, \alpha) = 1$ then $I(B, \alpha) = 1$.
+
+\begin{claim}
+$\neg I$ rule is sound in first-order predicate logic.
+\end{claim}
+\begin{proof}
+\begin{prooftree*}
+\hypo{X, [A]^i}
+\infer[no rule]1{\Pi}
+\infer[no rule]1{\bot}
+\infer1[\negi{i}]{\neg A}
+\end{prooftree*}
+Suppose that there is a counterexample, so each member of $X$ is true and $\neg A$ is not true. Since $\neg A$ is not true, then $A$ is true. However, since each member of $X$ is true and $A$ is true, then $X, A \not\vDash \bot$, which contradicts the inductive hypothesis that $X, A \vDash \bot$. Therefore, there is no counterexample.
+\end{proof}
+
+\begin{claim}
+$\exists I$ rule is sound in first-order predicate logic.
+\end{claim}
+\begin{proof}
+\begin{prooftree*}
+\hypo{X}
+\infer[no rule]1{\Pi}
+\infer[no rule]1{A(t)}
+\infer1[\exi]{\exists x A(x)}
+\end{prooftree*}
+Since $X \vDash A(t)$, then in any model $\mathfrak{M} = \langle D, I \rangle$ and assignment $\alpha$ where each member of $X$ is true, so is $A(t)$. Suppose that there is a model $\mathfrak{M}' = \langle D, I' \rangle$ such that each member of $X$ is true when $I'(t, \alpha) = \delta$, where $\delta$ is an object in the domain $D$. By \textit{semantic substitution}, $I'(A(t), \alpha) = I'(A(x), \alpha[x : \delta])$. $I'(A(t), \alpha) = 1$ from the inductive hypothesis. Subsequently, $I'(A(x), \alpha[x : \delta]) = 1$, so $I'(\exists x A(x), \alpha) = 1$. Notice that $\delta$ can be any object in $D$ such that each member of $X$ is true. Therefore, $\exists x A(x)$ is true in any $\mathfrak{M}$ and $\alpha$ where each member of $X$ is true.
+\end{proof}

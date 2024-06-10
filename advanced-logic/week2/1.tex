@@ -1,0 +1,43 @@
+\begin{enumerate}[label=\alph*)]
+\item[c)]
+
+$I(\forall x \forall y (Bxy \to \neg Byx), \alpha) = 1$ iff
+\vspace{-\parskip}
+\begin{itemize}[noitemsep, leftmargin=*]
+\item $I(\forall y (Bxy \to \neg Byx), \alpha[x : r]) = 1$ iff
+   \begin{itemize}[topsep=-\parskip, noitemsep, leftmargin=*]
+   \item $I(Bxy \to \neg Byx, \alpha[x : r, y : r]) = 1$, since $I(Bxy, \alpha[x : r, y : r]) = 0$,
+   \item $I(Bxy \to \neg Byx, \alpha[x : r, y : p]) = 1$, since $I(Bxy, \alpha[x : r, y : p]) = 0$,
+   \item $I(Bxy \to \neg Byx, \alpha[x : r, y : s]) = 1$, since $I(\neg Byx, \alpha[x : r, y : s]) = 1$.
+   \end{itemize}
+\item $I(\forall y (Bxy \to \neg Byx), \alpha[x : p]) = 1$ iff
+   \begin{itemize}[topsep=-\parskip, noitemsep, leftmargin=*]
+   \item $I(Bxy \to \neg Byx, \alpha[x : p, y : r]) = 1$, since $I(\neg Byx, \alpha[x : p, y : r]) = 1$,
+   \item $I(Bxy \to \neg Byx, \alpha[x : p, y : p]) = 1$, since $I(Bxy, \alpha[x : p, y : p]) = 0$,
+   \item $I(Bxy \to \neg Byx, \alpha[x : p, y : s]) = 1$, since $I(Bxy, \alpha[x : p, y : s]) = 0$.
+   \end{itemize}
+\item $I(\forall y (Bxy \to \neg Byx), \alpha[x : s]) = 1$ iff
+   \begin{itemize}[topsep=-\parskip, noitemsep, leftmargin=*]
+   \item $I(Bxy \to \neg Byx, \alpha[x : s, y : r]) = 1$, since $I(Bxy, \alpha[x : s, y : r]) = 0$,
+   \item $I(Bxy \to \neg Byx, \alpha[x : s, y : p]) = 1$, since $I(\neg Byx, \alpha[x : s, y : p]) = 1$,
+   \item $I(Bxy \to \neg Byx, \alpha[x : s, y : s]) = 1$, since $I(Bxy, \alpha[x : s, y : s]) = 0$.
+   \end{itemize}
+\end{itemize}
+
+$I(\exists x \forall y Bxy, \alpha) = 0$ iff
+\vspace{-\parskip}
+\begin{itemize}[noitemsep, leftmargin=*]
+\item $I(\forall y Bxy, \alpha[x : r]) = 0$, since $I(Bxy, \alpha[x : r, y : r]) = 0$,
+\item $I(\forall y Bxy, \alpha[x : p]) = 0$, since $I(Bxy, \alpha[x : p, y : p]) = 0$,
+\item $I(\forall y Bxy, \alpha[x : s]) = 0$, since $I(Bxy, \alpha[x : s, y : r]) = 0$.
+\end{itemize}
+
+$I(\forall x (Mx \lor \exists y (My \land Bxy)), \alpha) = 1$ iff
+\vspace{-\parskip}
+\begin{itemize}[noitemsep, leftmargin=*]
+\item $I(Mx \lor \exists y (My \land Bxy)), \alpha[x : r]) = 1$, since $I(Mx, \alpha[x : r]) = 1$,
+\item $I(Mx \lor \exists y (My \land Bxy)), \alpha[x : p]) = 1$, since $I(\exists y (My \land Bxy)), \alpha[x : p, y : r]) = 1$ because $I(My, \alpha[x : p, y : r]) = 1$ and $I(Bxy, \alpha[x : p, y : r]) = 1$,
+\item $I(Mx \lor \exists y (My \land Bxy)), \alpha[x : s]) = 1$, since $I(Mx, \alpha[x : s]) = 1$.
+\end{itemize}
+
+\end{enumerate}

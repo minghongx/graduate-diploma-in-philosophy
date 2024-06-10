@@ -1,0 +1,11 @@
+\section*{QUESTION 1A: RECURSIVE FUNCTIONS}
+
+$\leq\ \subseteq \omega \times \omega$ is a recursive relation because it can be defined by $IsZero(x \dot - y)$ which is composed of two recursive functions $IsZero(x)$ and truncated subtraction $\dot -$. For why they are recursive functions, see (Incompleteness and Computability ver F19, Section 2.4-2.8). Every natural number has a number that is smaller or equal to it, so the slice of $\leq$ defined by $\{ y \in \omega \mid \exists x \in \omega (x \leq y) \}$ is just the set of natural number $\omega$. We know $\omega$ is a recursive set, so is the slice.
+
+From (Incompleteness and Computability ver F19, Proposition 3.19), we know that $Proof_\Gamma(x,y) \subseteq \omega \times \omega$, i.e., $x$ is a proof of $y$ from undischarged assumptions in $\Gamma$, is a recursive relation if $\Gamma$ is a recursive set of sentences. $Q$ (Robinson arithmetic) is a recursive set of sentences, so $Proof_Q(x,y)$ is a recursive relation. From (Incompleteness and Computability ver F19, Theorem 4.29), we know that the slice, $y$ is provable in $Q$
+\begin{equation*}
+  Prov_Q(y) \iff \exists x Proof_Q(x,y)    
+\end{equation*}
+is not recursive since $Q$ is undecidable.
+
+Inspired by (Computability and Logic 5ed, Chapter 8), let $Halt(m, t)$ expressing ``register machine with code number $m$ halts at step $t$'', and it is recursive because it can be defined by other recursive functions constructed in the chapter. Its slice $\exists t\ Halt(m, t)$ means a register machine $m$ has the property that it eventually halts at certain step $t$. This slice corresponds to the halting set for register machines, which is known to be non-recursive.

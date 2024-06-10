@@ -1,0 +1,50 @@
+\begin{enumerate}[label=\alph*)]
+\item 
+Let $M = \langle D, I \rangle$ be the model such that $D = \{m, n\}$ and $I$ defined as
+\begin{center}
+\begin{tblr}{
+  colspec={c|c|c},
+}
+& $I(F)$ & $I(G)$ \\
+\hline[solid]
+$m$ & $1$ & $1$ \\
+$n$ & $1$ & $0$ \\
+\end{tblr}
+\end{center}
+
+$I(\exists x (Fx \to Gx), \alpha) = 1$, since $I(Fx \to Gx, \alpha[x : m]) = 1$.
+
+$I(\forall x Fx, \alpha) = 1$, since $I(Fx, \alpha[x : m]) = 1$ and $I(Fx, \alpha[x : n]) = 1$.
+
+$I(\forall x Gx, \alpha) = 0$, since $I(Gx, \alpha[x : n]) = 0$.
+
+\item
+Let $M = \langle D, I \rangle$ be the model such that $D = \{m, n\}$ and $I$ defined as
+\begin{center}
+\begin{tblr}{
+  width=0.5\textwidth,
+  colspec={X[c]X[c]},
+}
+  \begin{tblr}{c|c}
+    & $I$ & \\
+    \hline[solid]
+    $t_1$ & $m$ \\
+    $t_2$ & $m$ \\
+    $t_3$ & $m$ \\
+    $\vdots$ & $\vdots$ \\
+  \end{tblr}
+  &
+  \begin{tblr}{c|c}
+    & $I(F)$ & \\
+    \hline[solid]
+    $m$ & $1$ \\
+    $n$ & $0$ \\
+  \end{tblr}
+\end{tblr}
+\end{center}
+
+$I(\exists x \neg Fx, \alpha) = 1$, since $I(\neg Fx, \alpha[x : n]) = 1$.
+
+$I(Ft_n, \alpha[x : n]) = 1$ where $n \in \mathbb{Z}^+$, since $I(t_n) = m$ and $I(F)(m) = 1$.
+
+\end{enumerate}

@@ -1,0 +1,31 @@
+$I(\exists f_1 \forall x B f_1(x)x, \alpha) = 1$ iff there is an $f_1$-variant $\alpha'$ of $\alpha$ so that $I(\forall x B f_1(x)x, \alpha') = 1$. Here is the one that meets the condition:
+\begin{center}
+\begin{tblr}{
+  colspec={c|c},
+}
+& $\alpha'(f_1)$ \\
+\hline[solid]
+$r$ & $p$ \\
+$p$ & $s$ \\
+$s$ & $r$
+\end{tblr}
+\end{center}
+$I(\forall x B f_1(x)x, \alpha') = 1$ because \\
+$I(B)(\alpha'(f_1)(r), r) = I(B)(p, r) = 1$, and \\
+$I(B)(\alpha'(f_1)(p), p) = I(B)(s, p) = 1$, and \\
+$I(B)(\alpha'(f_1)(s), s) = I(B)(r, s) = 1$.
+
+Similarly, there is an $f_2$-variant $\alpha'$ of $\alpha$ so that $I(\forall x B xf_2(x), \alpha') = 1$:
+\begin{center}
+\begin{tblr}{
+  colspec={c|c},
+}
+& $\alpha'(f_2)$ \\
+\hline[solid]
+$r$ & $s$ \\
+$p$ & $r$ \\
+$s$ & $p$
+\end{tblr}
+\end{center}
+Hence, $I(\exists f_2 \forall x B xf_2(x), \alpha) = 1$.
+\newpage

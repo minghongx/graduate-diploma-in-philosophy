@@ -1,0 +1,40 @@
+\section*{QUESTION 2: ESSAY}
+\newtheorem{theorem}{Theorem}
+
+\begin{theorem}[Compactness theorem for first-order logic]
+Let $\Gamma$ be a set of well-formed formula in the language of first-order logic. If $\Gamma$ is finitely satisfiable, then it is satisfiable.
+\end{theorem}
+
+One purpose for employing logic is to characterise types of structures. For instance, we can define the domain of a structure as a set containing only two elements:
+\begin{equation*}
+   |D|_{=2} \equiv \exists y_1 \exists y_2 \forall x (y_1 \neq y_2 \land (y_1 = x \lor y_2 = x))
+\end{equation*}
+Likewise, we can also express that the cardinality of a domain is greater than $n$:
+\begin{align*}
+   |D|_{>1} &\equiv \neg \exists y_1 \forall x (y_1 = x) \\
+   |D|_{>2} &\equiv \neg \exists y_1 \exists y_2 \forall x (y_1 = x \lor y_2 = x)) \\
+   |D|_{>3} &\equiv \neg \exists y_1 \exists y_2 \exists y_3 \forall x (y_1 = x \lor y_2 = x \lor y_3 = x)) \\
+   &\vdots \\
+   |D|_{>n} &\equiv \dots
+\end{align*}
+Naturally, we might wonder whether we can use the language of first-order logic to characterise the structure of natural numbers. However, the Compactness theorem tells us that the language of first-order logic cannot precisely characterise the natural number structure. Suppose we have a first-order theory $T$, we can add additional formulae to it to obtain a new theory:
+\begin{equation*}
+   T^* = T \cup \{ \mathbf{c} \neq \underline{n} \mid n \in \omega \}
+\end{equation*}
+For every finite subset of $T^*$, we can find a model with a domain being the natural number set $\omega$ that satisfies it. According to the Compactness theorem, the entire $T^*$ has a model whose domain contains a constant $c$ that is not a natural number. Since any model of $T*$ is a model of $T$, it follows that $T$ has a model that does not have the structure of the natural numbers.
+
+What we initially hoped for was that $T$ could only be satisfiable by models possessing the structure of natural numbers. However, the Compactness theorem predicts that any $T$ also have a model that do not possess the structure of natural numbers yet still make it satisfiable. The language of first-order logic lacks the expressibility to exclude this unwanted models. Hence, we cannot precisely describe the natural number structure within the first-order language.
+
+Similarly, we also cannot precisely characterise the real number structure within first-order language. We can introduce a strange constant just as we did in the reasoning above for the natural number structure:
+\begin{equation*}
+   T^* = T \cup \{ \underline{0} < \mathbf{c} < \underline{1/n} \mid n \in \omega \}
+\end{equation*}
+This constant was called \textit{infinitesimal} in the history of calculus development. It was once considered a concept lacking a rigorous definition and was later replaced by the more rigorously defined concept called limits in the further development of calculus. However, although introducing this constant reveals that the first-order language cannot precisely characterise the real number structure due to the Compactness theorem, more importantly, the theorem predicts the existence of a model that includes infinitesimal. This implies that infinitesimal can be rigorously treated, much like limits. We should not dismiss it so easily; perhaps calculus based on infinitesimal could be better than calculus based on limits.
+
+Compactness theorem is indeed a limitative result, as it implies that the expressibility of first-order logic is limited because it cannot precisely characterise some important structures we concerned. However, it is also a powerful result because it allows us to infer the existence of peculiar models, even if we do not yet know what these models look like. 
+
+Let's revisit the second example mentioned at the beginning of the essay. If we apply the Compactness theorem to it, we will find that if a formula is true in all models with a finite domain, it's true in some models with an infinite domain. There is no formula true in all and only the finite models. At first glance, this says that first-order language cannot distinguish between finitude and infinitude. However, looking at it from another perspective, this implies that the Compactness theorem establishes a bridge between finitude and infinitude.
+
+For example, sometimes we wish to prove that a certain goal is unattainable. We wish prove that the goal cannot be achieved even using infinite resources. However, the difficulty in proving that a goal cannot be achieved with infinite resources can be significantly different from proving that it cannot be achieved with finite resources. Since we have the Compactness theorem, we can instead prove that it cannot be achieved with every possible finite resources. Then, according to the theorem, we can conclude that even with infinite resources, we also cannot achieve the goal. Conversely, if we prove that we can achieve a goal using infinite resources, then the Compactness theorem suggests that we can also achieve it using finite resources. In this sense, ``compactness'' refers to a kind of ``finiteness'' in the quantity of necessary resources.
+
+Perhaps it is partly because of the power of the Compactness theorem that we find it difficult to abandon first-order logic despite its limitations.

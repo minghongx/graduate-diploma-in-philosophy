@@ -1,0 +1,49 @@
+\section*{TASK 1}
+
+\begin{enumerate}
+\item
+\begin{prooftree*}
+\hypo{\no x (Fx, Fx \land Gx)}
+\hypo{[Fn]^1}
+\hypo{[Fn]^1}
+\hypo{[Gn]^2}
+\infer2[\ai]{Fn \land Gn}
+\infer3[\noe]{\bot}
+\infer1[\noi{1,2}]{\no x (Fx, Gx)}
+\end{prooftree*}
+The eigenvariable condition of the $\noi{1,2}$ step is satisfied because the name $n$ appears only in the assumptions discharged in this step, $\{ Fn, Gn \}$, and nowhere in any of the remaining undischarged assumptions of this step, $\{ \no x (Fx, Fx \land Gx) \}$.
+
+\item
+\begin{prooftree*}
+\hypo{\no x (\neg Gx, Hx)}
+\hypo{\no x (Fx, Gx)}
+\hypo{[Fn]^1}
+\hypo{[Gn]^2}
+\infer3[\noe]{\bot}
+\infer1[\negi{2}]{\neg Gn}
+\hypo{[Hn]^3}
+\infer3[\noe]{\bot}
+\infer1[\noi{1,3}]{\no x (Fx, Hx)}
+\end{prooftree*}
+The eigenvariable condition of the $\noi{1,3}$ step is satisfied because the name $n$ appears only in the assumptions discharged in this step and nowhere in any of the remaining undischarged assumptions of this step, $\{ \no x (\neg Gx, Hx), \no x (Fx, Gx) \}$.
+
+\item
+\begin{prooftree*}
+\fontsize{5}{6}\selectfont
+\hypo{\no x (Fx, Gx) \lor \no x (Fx, Hx)}
+\hypo{[\no x (Fx, Gx)]^1}
+\hypo{[Fn]^3}
+\hypo{[Gn \land Hn]^4}
+\infer1[\ae]{Gn}
+\infer3[\noe]{\bot}
+\hypo{[\no x (Fx, Hx)]^2}
+\hypo{[Fn]^3}
+\hypo{[Gn \land Hn]^4}
+\infer1[\ae]{Hn}
+\infer3[\noe]{\bot}
+\infer3[\de{1,2}]{\bot}
+\infer1[\noi{3,4}]{\no x (Fx, Gx \land Hx)}
+\end{prooftree*}
+The eigenvariable condition of the $\noi{3,4}$ step is satisfied because the name $n$ appears only in the assumptions discharged in this step and nowhere in any of the remaining undischarged assumptions of this step, $\{ \no x (Fx, Gx) \lor \no x (Fx, Hx) \}$.
+
+\end{enumerate}

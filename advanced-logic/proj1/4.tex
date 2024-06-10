@@ -1,0 +1,30 @@
+\section*{TASK 4}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+
+\begin{definition}[Witnessed set]
+A set $X$ of formulae in our new language is said to be \textsc{witnessed} iff whenever $\no x (A(x), B(x)) \not\in X$, there is some name $n$ such that $A(n) \in X$ and $B(n) \in X$.
+\end{definition}
+
+\begin{lemma}[Witnessed maximal consistent set expansion]
+If $X \not\vdash A$ and there is an unending supply of names $c_1,c_2,c_3,\dots$, not present in $X$ or in $A$, then there is some witnessed maximal consistent set $X^* \supseteq X$ such that $X^* \not\vdash A$.
+\end{lemma}
+\begin{proof}
+We can adopt the construction process used in proving the completeness of propositional logic to construct $X^*$ with an exception case: if $A_n = \neg\no x (A(x), B(x))$ for some formula $A(x)$ and some formula $B(x)$, and if $X_{n-1}, \neg\no x (A(x), B(x)) \not\vdash \bot$, then choose a name $c_m$ (from $c_1,c_2,c_3,\dots$) not occurring in $X_{n-1}$ or $A_n$, and set $X_n = X_{n-1} \cup \{ \neg\no x (A(x), B(x)), A(c_m), B(c_m) \}$.
+
+We can reuse the proofs that such a constructed $X^*$ is consistent and maximal consistent. We only need to provide proof that such a constructed X is witnessed.
+
+If $\no x (A(x), B(x)) \not\in X^*$, then by the negation-completeness of $X^*$, $\neg\no x (A(x), B(x)) \in X^*$. Since $\neg\no x (A(x), B(x))$ is added to the set along with a witness $\{ A(c_m), B(c_m) \}$ as defined in the construction process, it follows that there is some name $c$ such that $A(c) \in X^*$ and $B(c) \in X^*$.
+\end{proof}
+
+\begin{lemma}[Model construction]
+If $X^*$ is a witnessed maximal consistent set, then there is a model $\mathfrak{M}_{X^*}$, whose domain is the set of all name occurring in $X^*$, such that for each formula $A$, $\mathfrak{M}_{X^*} \vDash A$ iff $A \in X^*$.
+\end{lemma}
+\begin{proof}
+Assume that a formula $A$ is true in $\mathfrak{M}_{X^*}$ iff $A \in X^*$. This is the induction hypothesis. The base case and the inductive cases for propositional connectives are given in the propositional completeness proof in the lecture materials, so we will not repeat them. The inductive case for the `$\no$' quantifier requires a proof.
+
+$A \equiv \no x (A(x), (Bx))$: We prove both direction simultaneously. $\mathfrak{M}_{X^*} \vDash A$ iff $\mathfrak{M}_{X^*} \vDash A(n)$ and $\mathfrak{M}_{X^*} \vDash B(n)$ for no name $n$ (by the truth condition defined in TASK 2). By induction hypothesis, this is the case iff $A(n) \in X^*$ and $B(n) \in X^*$ for no name $n$. Since $X^*$ is maximal consistent, this holds iff $\no x (A(x), (Bx)) \in X^*$. Therefore, $\mathfrak{M}_{X^*} \vDash \no x (A(x), (Bx))$ iff $\no x (A(x), (Bx)) \in X^*$.
+\end{proof}
+
+Finally, we complete the proof of the completeness theorem for our new language using these two lemmas. The reasoning is the same as the last part of the proof of the completeness theorem for first-order predicate logic in the lecture notes.

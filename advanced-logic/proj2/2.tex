@@ -1,0 +1,25 @@
+% Discussed in MSE4125051: https://math.stackexchange.com/questions/4125051/problem-17-2-from-computability-and-logic-by-boolos-et-all
+\section*{QUESTION 1B: RECURSIVE SETS IN ARITHMETIC}
+
+We wish to show that there is no recursive set $S$ such that both $P^+ \subset S$ and $P^- \cap S = \emptyset$.
+
+\begin{proof}
+Suppose $S$ is recursive, then there is a formula $F(x)$ that defines $S$ in $Q$:
+\begin{align}
+   n \in S &\iff Q \vdash F(\underline{n}) \label{eq:1} \\
+   n \not\in S &\iff Q \vdash \neg F(\underline{n}) \label{eq:2}
+\end{align}
+where $\underline{n}$ is the numeral of $n$. By the diagonalisation lemma, we can find a sentence $G$ such that
+\begin{equation}
+   T \vdash G \leftrightarrow \neg F(\ulcorner G \urcorner) \label{eq:3}
+\end{equation}
+Suppose $G$ is a theorem of $T$, then $\ulcorner G \urcorner \in P^+$ by the definition of $P^+$. Since $P^+ \subset S$ according to the definition of $S$, we have $\ulcorner G \urcorner \in S$. The left-to-right direction of (\ref{eq:1}) gives $Q \vdash F(\ulcorner G \urcorner)$. Since $T$ extends $Q$, we can weaken the last conclusion to $T \vdash F(\ulcorner G \urcorner)$. Consequently, the left-to-right direction of the contraposition of (\ref{eq:3})
+\begin{equation*}
+   T \vdash F(\ulcorner G \urcorner) \leftrightarrow \neg G
+\end{equation*}
+tells us $T \vdash \neg G$. This implies $\ulcorner G \urcorner \in P^-$ by the definition of $P^-$. According to the definition of $S$, $P^- \cap S = \emptyset$, so $\ulcorner G \urcorner \not\in S$. But this contradicts $\ulcorner G \urcorner \in S$.
+
+Suppose $G$ is not a theorem of $T$, then by the definition of $P^-$, $\ulcorner G \urcorner \in P^-$ . Since $P^- \cap S = \emptyset$ according to the definition of $S$, we have $\ulcorner G \urcorner \not\in S$. The left-to-right direction of (\ref{eq:2}) gives $Q \vdash \neg F(\ulcorner G \urcorner)$. Since $T$ extends $Q$, we can weaken the last conclusion to $T \vdash \neg F(\ulcorner G \urcorner)$. Consequently, by the right-to-left direction of (\ref{eq:3}), $T \vdash G$. This implies $\ulcorner G \urcorner \in P^+$ by the definition of $P^+$. According to the definition of $S$, $P^+ \subset S$, so $\ulcorner G \urcorner \in S$. But this contradicts $\ulcorner G \urcorner \not\in S$.
+
+Since both possibilities lead to a contradiction, we conclude that $S$ cannot be recursive.
+\end{proof}

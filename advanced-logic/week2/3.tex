@@ -1,0 +1,45 @@
+\begin{enumerate}[label=\alph*)]
+\item \leavevmode \vspace{-1.75\baselineskip}
+
+\begin{claim}
+$\exists x Fx, \exists x Gx \not\vDash \exists x (Fx \land Gx)$
+\end{claim}
+
+\begin{proof}
+Let $M = \langle D, I \rangle$ be the model such that $D = \{m, n\}$ and $I$ defined as
+\begin{center}
+\begin{tblr}{
+  colspec={c|c|c},
+}
+& $I(F)$ & $I(G)$ \\
+\hline[solid]
+$m$ & $1$ & $0$ \\
+$n$ & $0$ & $1$ \\
+\end{tblr}
+\end{center}
+Let $v$ be an assignment whose two x-variant are $v[x : m]$ and $v[x : n]$. This provides a counterexample to $\exists x Fx, \exists x Gx \Yright \exists x (Fx \land Gx)$.
+
+The assignment $v[x : m]$ yields
+\begin{align*}
+\begin{split}
+I(Fx,v[x : m]) &= I(F)(I(x,v[x : m])) \\
+&= I(F)(m) \\
+&= 1
+\end{split} \\
+I(Gx,v[x : m]) &= \cdots = 0
+\end{align*}
+
+The assignment $v[x : n]$ yields
+\begin{align*}
+I(Fx,v[x : n]) &= \cdots = 0 \\
+I(Gx,v[x : n]) &= \cdots = 1
+\end{align*}
+
+$I(\exists x Fx, v) = 1$, since $I(Fx,v[x : m]) = 1$. $I(\exists x Gx, v) = 1$, since $I(Gx,v[x : n]) = 1$. Thus, $I(A, v) = 1$ for each $A \in \{ \exists x Fx, \exists x Gx \}$, i.e., the premises are \textit{true}.
+
+Since $I(Fx,v[x : m]) = 1$ and $I(Gx,v[x : m]) = 0$, $I(Fx \land Gx, v[x : m]) = 0$. Similarly, $I(Fx \land Gx, v[x : n]) = 0$. Thus, $I(\exists x (Fx \land Gx), v) = 0$, i.e., the conclusion is \textit{false}.
+\end{proof}
+
+\item[c)] This is a paradox. This is a logical truth
+
+\end{enumerate}

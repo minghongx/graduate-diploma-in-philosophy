@@ -1,0 +1,36 @@
+\begin{enumerate}[label=(\roman*)]
+\item
+$\forall x \forall y (Pxy \to Qxy)$ means $P \subseteq Q$.
+
+$\forall x \forall y (Pxy \to Qxy) \land \forall x \forall y \forall z ((Pxy \land Qyz) \to Qxz)$, i.e., $Repeat(P, Q)$, means $Q$ is a transitive relation contains $P$. \textcolor{red}{Don't know how to explain, so might be wrong.}
+
+By observing the tables, $S$ is a transitive relation \textcolor{red}{(Why?)}, and it does contain $R$. Therefore, $Repeat(R, S)$ holds in this model.
+
+\item
+$Repeat(P, P^*)$: $P^*$ is a transitive relation contains $P$.
+
+$\forall Q (Repeat(P, Q) \to \forall x \forall y (P^*xy \to Qxy))$: if $Q$ is any transitive relation containing $P$, then $P^* \subseteq Q$.
+
+The conjunction of them means that $P^*$ is the smallest transitive relation containing $P$, namely, $P^*$ is the transitive closure of $P$.
+
+The interpretation of $R^*$ so that it is the transitive closure of $R$ is
+\begin{center}
+\begin{tblr}{
+  colspec={c|cccccc},
+}
+$I(R^*)$ & $\alpha$ & $\beta$ & $\gamma$ & $\delta$ & $\epsilon$ & $\zeta$\\
+\hline[solid]
+$\alpha$   & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+$\beta$    & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\
+$\gamma$   & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ \\
+$\delta$   & $0$ & $0$ & $0$ & $0$ & $1$ & $1$ \\
+$\epsilon$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+$\zeta$    & $0$ & $0$ & $0$ & $0$ & $0$ & $0$
+\end{tblr}
+\end{center}
+\textcolor{red}{Why?}
+
+\item
+Every relation has a transitive closure. \textcolor{red}{Don't know how to prove using the second-order logic.}
+
+\end{enumerate}

@@ -1,0 +1,23 @@
+\begin{enumerate}[label=\alph*)]
+\item[e)]
+
+\begin{gather*}
+((Fx \to \exists y (Lxy \land (Gz \lor \forall x Hx)))[x/z])[z/a] \\
+(Fx[x/z] \to \exists y (Lxy \land (Gz \lor \forall x Hx))[x/z])[z/a] \\
+(Fz \to \exists y (Lxy \land (Gz \lor \forall x Hx))[x/z])[z/a] \\
+(Fz \to \exists y (Lxy[x/z] \land (Gz \lor \forall x Hx)[x/z]))[z/a] \\
+(Fz \to \exists y (Lzy \land (Gz \lor \forall x Hx)[x/z]))[z/a] \\
+(Fz \to \exists y (Lzy \land (Gz[x/z] \lor (\forall x Hx)[x/z])))[z/a] \\
+(Fz \to \exists y (Lzy \land (Gz \lor \forall x Hx)))[z/a] \\
+Fz[z/a] \to (\exists y (Lzy \land (Gz \lor \forall x Hx)))[z/a] \\
+Fa \to (\exists y (Lzy \land (Gz \lor \forall x Hx)))[z/a] \\
+Fa \to \exists y (Lzy[z/a] \land (Gz \lor \forall x Hx)[z/a]) \\
+Fa \to \exists y (Lay \land (Gz \lor \forall x Hx)[z/a]) \\
+Fa \to \exists y (Lay \land (Gz[z/a] \lor (\forall x Hx)[z/a])) \\
+Fa \to \exists y (Lay \land (Ga \lor (\forall x Hx)[z/a])) \\
+Fa \to \exists y (Lay \land (Ga \lor \forall x Hx))
+\end{gather*}
+
+$(\forall x (Fx \to Lxy))[y/x]$ is wrong because the $x$ to be substituted is not free for the variable $y$ in $Fx \to Lxy$ since $y$ is in scope of $\forall x$ that binds the $x$. Such a substitution results in unwanted variable capture.
+
+\end{enumerate}

@@ -1,0 +1,90 @@
+\section*{TASK 2}
+
+% \NewDocumentCommand{\no}{}{\ensuremath{NO}}
+
+\begin{enumerate}
+\item
+Observing line by line, it can be seen that no matter what object is assigned to $x$, $F$ and $R$ cannot both be true at the same time:
+\begin{center}
+\begin{tblr}{
+  width=0.5\textwidth,
+  colspec={X[c]X[c]},
+}
+  \begin{tblr}{c|c}
+    & $I(F)$ \\
+    \hline[solid]
+    $0$ & $1$ \\
+    $1$ & $0$ \\
+    $2$ & $1$ \\
+    $3$ & $0$
+  \end{tblr}
+  &
+  \begin{tblr}{c|cccc}
+    $I(R)$ & $0$ & $1$ & $2$ & $3$ \\
+    \hline[solid]
+    $0$ & $0$ & & & \\
+    $1$ & & $1$ & & \\
+    $2$ & & & $0$ & \\
+    $3$ & & & & $1$
+  \end{tblr}
+\end{tblr}
+\end{center}
+Namely, there is no x-variant $\alpha'$ of $\alpha$ where $I(Fx, \alpha') = 1$ and $I(Rxx, \alpha') = 1$. Therefore, $I(\no x (Fx, Rxx), \alpha) = 1$.
+
+\item
+$I(\no x (Rxy, \no y (Rxy, \neg Ryx)), \alpha) = 1$ iff there is no x-variant $\alpha^x$ of $\alpha$ where
+\vspace{-\parskip}
+\begin{itemize}[noitemsep, leftmargin=*]
+\item $I(Rxy, \alpha^x) = 1$, and
+\item $I(\no y (Rxy, \neg Ryx), \alpha^x) = 1$ iff there is no y-variant $\alpha^{x,y}$ of $\alpha^x$ where
+   \begin{itemize}[topsep=-\parskip, noitemsep, leftmargin=*]
+   \item $I(Rxy, \alpha^{x,y}) = 1$, and
+   \item $I(\neg Ryx, \alpha^{x,y}) = 1$
+   \end{itemize}
+\end{itemize}
+By observing the truth table of $I(R)$, it can be found that $R$ is a symmetric relation. This means that for no pair $x,y \in D$ do we have both $Rxy$ and $\neg Ryx$. This entails that there is no y-variant $a^{x,y}$ of every x-variant $\alpha^x$ of $\alpha$ such that $I(Rxy, \alpha^{x,y}) = 1$ and $I(\neg Ryx, \alpha^{x,y}) = 1$; thus, $I(\no y (Rxy, \neg Ryx), \alpha^x) = 1$ for every x-variant $\alpha^x$ of $\alpha$. On the other hand, there is an x-variant $\alpha^x[x:1,y:0]$ of $\alpha[y:0]$ such that $I(Rxy, \alpha^x) = 1$. Since $I(\no y (Rxy, \neg Ryx), \alpha^x)$ is true for every x-variant $\alpha^x$ of $\alpha$, it is true under this assignment. There is an x-variant, e.g., $\alpha^x[x:1,y:0]$ of $\alpha[y:0]$, where $I(Rxy, \alpha^x) = 1$ and $I(\no y (Rxy, \neg Ryx), \alpha^x) = 1$; therefore, $I(\no x (Rxy, \no y (Rxy, \neg Ryx)), \alpha) = 0$.
+
+\item
+$I(\no x (Fx, \no y (Ffy, Rxy)), \alpha) = 1$ iff there is no x-variant $\alpha^x$ of $\alpha$ where
+\vspace{-\parskip}
+\begin{itemize}[noitemsep, leftmargin=*]
+\item $I(Fx, \alpha^x) = 1$, and
+\item $I(\no y (Ffy, Rxy), \alpha^x) = 1$ iff there is no y-variant $\alpha^{x,y}$ of $\alpha^x$ where
+   \begin{itemize}[topsep=-\parskip, noitemsep, leftmargin=*]
+   \item $I(Ffy, \alpha^{x,y}) = 1$, and
+   \item $I(Rxy, \alpha^{x,y}) = 1$
+   \end{itemize}
+\end{itemize}
+Suppose $I(\no x (Fx, \no y (Ffy, Rxy)), \alpha) = 0$, then we want to find an x-variant $\alpha^x$ of $\alpha$ such that $I(Fx, \alpha^x) = 1$ and $I(\no y (Ffy, Rxy), \alpha^x) = 1$. There are two x-variant such that the former is true: $\alpha^x[x:0]$ or $\alpha^x[x:2]$. For the latter to be true, we must to show that there is no y-variant $a^{x,y}$ of either $\alpha^x[x:0]$ or $\alpha^x[x:2]$ such that $I(Ffy, \alpha^{x,y}) = 1$ and $I(Rxy, \alpha^{x,y}) = 1$. However, for each cases, there is such a y-variant: $\alpha^{x,y}[x:0,y:2]$ and $\alpha^{x,y}[x:2,y:0]$. So, $I(\no y (Ffy, Rxy), \alpha^x)$ could not be true under $\alpha^x[x:0]$ and $\alpha^x[x:2]$, i.e., it could not be true when $I(Fx, \alpha^x)$ is true. Therefore, $I(\no x (Fx, \no y (Ffy, Rxy)), \alpha) = 1$.
+
+\item
+$I(\no x (\no y (Fy, Ryx \land Fx), \no y (Ffy, Ryx \lor Fx)), \alpha) = 1$ iff there is no x-variant $\alpha^x$ of $\alpha$ where
+\vspace{-\parskip}
+\begin{enumerate}[noitemsep, leftmargin=*, label=\arabic*.]
+\item $I(\no y (Fy, Ryx \land Fx), \alpha^x) = 1$ iff there is no y-variant $\alpha^{x,y}$ of $\alpha^x$ where
+   \begin{enumerate}[topsep=-\parskip, noitemsep, leftmargin=*, label*=\arabic*.]
+   \item $I(Fy, \alpha^{x,y}) = 1$, and
+   \item $I(Ryx \land Fx, \alpha^{x,y}) = 1$
+   \end{enumerate}
+\hspace{-\leftmargin}and
+\item $I(\no y (Ffy, Ryx \lor Fx), \alpha^x) = 1$ iff there is no y-variant $\alpha^{x,y}$ of $\alpha^x$ where
+   \begin{enumerate}[topsep=-\parskip, noitemsep, leftmargin=*, label*=\arabic*.]
+   \item $I(Ffy, \alpha^{x,y}) = 1$, and
+   \item $I(Ryx \lor Fx, \alpha^{x,y}) = 1$
+   \end{enumerate}
+\end{enumerate}
+Suppose the opposite, then we must find an x-variant $\alpha^x$ of $\alpha$ such that both 1. and 2. are true.
+
+$\alpha^x[x:0]$: There is a y-variant $\alpha^{x,y}[x:0,y:2]$ of it such that both 1.1. and 1.2. are true, so 1. is false. Thus, $\alpha^x[x:0]$ is not the x-variant we want.
+
+$\alpha^x[x:1]$: For 1.2. to be true, its right conjunct $I(Fx, \alpha^{x,y})$ must be true. From the truth table of $I(F)$ we can observe that this requires $x$ to be $0$ or $2$, but the assignment does not assign $x$ to any of them, so 1.2. is always false under this assignment. It follows that there is no y-variant of $\alpha^x[x:1]$ such that both 1.1. and 1.2. are true because the latter is always false. So, 1. is true. However, there is a y-variant $\alpha^{x,y}[x:1,y:0]$ such that both 2.1 and 2.2 are true:
+\[I(F)(f)(0) = I(F)(0) = 1 \quad\text{and}\quad I(R)(0, 1) = 1 \to I(R)(0, 1) \lor I(F)(1) = 1\] 
+So, 2. is false in this case. Thus, $\alpha^x[x:1]$ is not the x-variant we want.
+
+$\alpha^x[x:2]$: There is a y-variant $\alpha^{x,y}[x:2,y:0]$ of it such that both 1.1. and 1.2. are true, so 1. is false. Thus, $\alpha^x[x:2]$ is not the x-variant we want.
+
+$\alpha^x[x:3]$: The reasoning is similar to the $\alpha^x[x:1]$ case. There is a y-variant $\alpha^{x,y}[x:3,y:0]$ such that both 2.1 and 2.2 are true, so 2. is false. Thus, $\alpha^x[x:3]$ is not the x-variant we want.
+
+Since there is no x-variant $\alpha^x$ of $\alpha$ such that both 1. and 2. are true, we can conclude that $I(\no x (\no y (Fy, Ryx \land Fx), \no y (Ffy, Ryx \lor Fx)), \alpha) = 1$.
+
+\end{enumerate}

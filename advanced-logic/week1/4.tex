@@ -1,0 +1,27 @@
+\begin{enumerate}[label=\alph*)]
+\item
+  \begin{prooftree*}
+  \hypo{[Fa]^1}
+  \hypo{\forall x (Fx \to Gx)}
+  \infer1[\une]{Fa \to Ga}
+  \infer2[\ce]{Ga}
+  \hypo{\forall x (Gx \to Hx)}
+  \infer1[\une]{Ga \to Ha}
+  \infer2[\ce]{Ha}
+  \infer1[\ci{1}]{Fa \to Ha}
+  \infer1[\uni]{\forall x (Fx \to Hx)}
+  \end{prooftree*}
+
+\item
+  \begin{prooftree*}
+  \hypo{\exists x Fx}
+  \hypo{[Fa]^1}
+  \hypo{[\forall x (Fx \to Gx)]^2}
+  \infer1[\une]{Fa \to Ga}
+  \infer2[\ce]{Ga}
+  \infer1[\exi]{\exists x Gx}
+  \infer2[\exe{1}]{\exists x Gx}
+  \infer1[\ci{2}]{\forall x (Fx \to Gx) \to \exists x Gx}
+  \end{prooftree*}
+
+\end{enumerate}

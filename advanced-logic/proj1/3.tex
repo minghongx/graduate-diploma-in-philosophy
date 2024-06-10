@@ -1,0 +1,31 @@
+\section*{TASK 3}
+\subsection*{Base case}
+The assumption rule provides the base case. The atomic proof is a proof for $A \Yright A$. Let $v$ be a model such that the conclusion $v(A) = 0$, then the premise is $v(A) = 0$. There is no way to construct a counterexample. Therefore, the assumption rule is truth preserving.
+
+For the inductive hypothesis, assuming that we are given proofs that are truth preserving. We wish to show that whatever proofs we make using an inference step are also truth preserving. Inductive cases of propositional connectives are given in the lecture. Here are the remaining cases of $\no$ quantifier.
+
+\subsection*{Inductive case for $\noi{i,j}$}
+We assume we have a proof $\Pi$ for $X, A(n), B(n) \Yright \bot$, and we form a new proof using the $\noi{i,j}$ rule.
+\begin{prooftree*}
+\hypo{X,[A(n)]^i,[B(n)]^j}
+\infer[no rule]1{\Pi}
+\infer[no rule]1{\bot}
+\infer1[\noi{i,j}]{\no x (A(x), B(x))}
+\end{prooftree*}
+We want to show that $X \vDash \no x (A(x), B(x))$. Suppose that there is a counterexample $v$, so $v(X) = 1$ and $v(\no x (A(x), B(x)) = 0$. Since $v(\no x (A(x), B(x)) = 0$, then if we substitute name $n$ for variable $x$, $v(A(n))$ and $v(B(n))$ cannot both be true. However, both of them are true because by inductive hypothesis, $v(X, A(n), B(n)) = 1$, i.e., $v(X) = v(A(n)) = v(B(n)) = 1$, which is a contradiction. Therefore, there is no counterexample.
+
+\subsection*{Inductive case for $\noe$}
+Assume we have proofs $\Pi_1$ for $X \Yright \no x (A(x), B(x))$, $\Pi_2$ for $Y \Yright A(t)$, and $\Pi_3$ for $Z \Yright B(t)$. We then form a new proof using the $\noe$ rule.
+\begin{prooftree*}
+\hypo{X}
+\infer[no rule]1{\Pi_1}
+\infer[no rule]1{\no x (A(x), B(x))}
+\hypo{Y}
+\infer[no rule]1{\Pi_2}
+\infer[no rule]1{A(t)}
+\hypo{Z}
+\infer[no rule]1{\Pi_3}
+\infer[no rule]1{B(t)}
+\infer3[\noe]{\bot}
+\end{prooftree*}
+We want to show $X,Y,Z \vDash \bot$. Suppose there is a counterexample $v$, so $v(X,Y,Z) = 1$ and $v(\bot) = 0$. Since $v(X,Y,Z) = 1$, then $v(X) = 1$. It follows from the inductive hypothesis that $v(\no x (A(x), B(x))) = 1$. Similarly, $v(A(t)) = v(B(t)) = 1$. However, $v(\no x (A(x), B(x)))$ is true only if $v(A(t))$ and $v(B(t))$ are not both true, which yields a contradiction. Therefore, there is no counterexample.

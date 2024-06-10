@@ -1,0 +1,42 @@
+\begin{enumerate}[label=\alph*)]
+\item[b)]
+
+$M_1$ and $M_2$ are counterexamples to this argument.
+
+In $M_1$, $I_1(\forall x \exists y Rxy, \alpha) = 1$, since
+\begin{itemize}[topsep=-\parskip, noitemsep, leftmargin=*]
+\item $I_1(\exists y Rxy, \alpha[x : k]) = 1$, since $I(Rxy, \alpha[x : k, y : m]) = 1$,
+\item $I_1(\exists y Rxy, \alpha[x : l]) = 1$, since $I(Rxy, \alpha[x : l, y : k]) = 1$,
+\item $I_1(\exists y Rxy, \alpha[x : m]) = 1$, since $I(Rxy, \alpha[x : m, y : l]) = 1$.
+\end{itemize}
+$I_1(\forall x Rxx, \alpha) = 0$, since
+\vspace{-\parskip}
+\begin{itemize}[noitemsep, leftmargin=*]
+\item $I_1(Rxx, \alpha[x : k]) = 0$,
+\item $I_1(Rxx, \alpha[x : l]) = 0$,
+\item $I_1(Rxx, \alpha[x : m]) = 0$.
+\end{itemize}
+
+In $M_2$, $I_2(\forall x \exists y Rxy, \alpha) = 1$, since
+\begin{itemize}[topsep=-\parskip, noitemsep, leftmargin=*]
+\item $I_1(\exists y Rxy, \alpha[x : k]) = 1$, since $I(Rxy, \alpha[x : k, y : l]) = 1$,
+\item $I_1(\exists y Rxy, \alpha[x : l]) = 1$, since $I(Rxy, \alpha[x : l, y : k]) = 1$,
+\item $I_1(\exists y Rxy, \alpha[x : m]) = 1$, since $I(Rxy, \alpha[x : m, y : k]) = 1$.
+\end{itemize}
+$I_1(\forall x Rxx, \alpha) = 0$, since
+\vspace{-\parskip}
+\begin{itemize}[noitemsep, leftmargin=*]
+\item $I_1(Rxx, \alpha[x : k]) = 0$,
+\item $I_1(Rxx, \alpha[x : l]) = 0$,
+\item $I_1(Rxx, \alpha[x : m]) = 0$.
+\end{itemize}
+
+$M_3$ is not a counterexample to this argument because $I_3(\forall x \exists y Rxy, \alpha) = 0$:
+\vspace{-\parskip}
+\begin{itemize}[noitemsep, leftmargin=*]
+\item $I_3(Rxy, \alpha[x : m, y : k]) = 0$,
+\item $I_3(Rxy, \alpha[x : m, y : l]) = 0$,
+\item $I_3(Rxy, \alpha[x : m, y : m]) = 0$.
+\end{itemize}
+
+\end{enumerate}
