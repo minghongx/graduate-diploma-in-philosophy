@@ -1,0 +1,56 @@
+\section*{QUESTION 2}
+
+\begin{enumerate}[label=(\alph*)]
+\item
+Suppose the argument has a K3-counterexample, setting $v(p) = 1$ and $v(q) = 1$. Then $v(p \land q) = 1$, which contradicts the assumption because $v(p \land q)$ is supposed to be $0$ or $n$. Hence, the argument is K3-valid, i.e. $p,q \vDash_{K3} p \land q$.
+
+Suppose it is LP-invalid, so either both $v(p) = 1$ and $v(q) = 1$ or both $v(p) = n$ and $v(q) = n$. Then $v(p \land q) = 1$ or $n$, which contradicts the assumption because $v(p \land q)$ is supposed to be $0$. Hence, the argument is also LP-valid.
+
+\item
+Suppose it is K3-invalid, so it has a K3-counterexample such that $v(p) = 1$. Since $v(p) = 1$, $v(q \to p ) = 1$, which contradicts the assumption because the valuation of the conclusion $v(q \to p)$ is supposed to be $0$ or $n$. Hence, the argument is K3-valid.
+
+Similarly, it is LP-valid since $v(p) = 1$ or $n$ leads to $v(q \to p) = 1$ or $n$ but not $0$.
+\begin{center}
+\begin{tblr}{
+  colspec={l|lll},
+}
+$\to$ & $0$ & \SetColumn{bg=gray!20} $n$ & \SetColumn{bg=gray!20} $1$ \\
+\hline[solid]
+$0$ & $1$ & $1$ & $1$ \\
+$n$ & $n$ & $n$ & $1$ \\
+$1$ & $0$ & $n$ & $1$ \\
+\end{tblr}
+\end{center}
+
+\item
+It is K3-invalid because there is a K3-counterexample. Take a valuation v with $v(p) = 1$ and $v(q) = n$, then the only premise $v(p) = 1$ but the conclusion $v(q \to q) = n$.
+
+It is LP-valid. See the truth table below. No matter what value $q$ takes, $v(q \to q)$ is either $1$ or $n$ but not $0$.
+\begin{center}
+\begin{tblr}{
+  colspec={l|lll},
+}
+$\to$ & $0$ & $n$ & $1$ \\
+\hline[solid]
+$0$ & \SetCell{bg=gray!20} $1$ & $1$ & $1$ \\
+$n$ & $n$ & \SetCell{bg=gray!20} $n$ & $1$ \\
+$1$ & $0$ & $n$ & \SetCell{bg=gray!20} $1$ \\
+\end{tblr}
+\end{center}
+
+\item
+Suppose the argument has a K3-counterexample, setting $v(p) = 1$, $v(p \to q) = 1$, and $v(q) = 0$ or $n$. Since $v(p) = 1$ and $v(p \to q) = 1$, $v(q)$ can only be $1$, which contradicts the assumption that $v(q) = 0$ or $n$. Therefore, there is no K3-counterexample, so the argument is K3-valid.
+
+It is LP-invalid since there is a LP-counterexample. Take a valuation $v$ with $v(p) = n$ and $v(q) = 0$. Then, the premises $v(p) = n$ and $v(p \to q) = n$ but the conclusion $v(q) = 0$.
+
+\item
+It is K3-invalid since there is a K3-counterexample. Take a valuation $v$ with $v(p) = 1$ and $v(q) = n$. Then, $v(p \land q) = n$, $v(\neg q) = n$, and $v(p \land \neg q) = n$. Thus the conclusion $v( (p \land q) \lor (p \land \neg q) ) = n$ while the premise $v(p) = 1$.
+
+Suppose the argument has a LP-counterexample, setting $v(p) = 1$ or $n$, $v( (p \land q) \lor (p \land \neg q) ) = 0$. Then, $v(p \land q) = 0$ and $v(p \land \neg q) = 0$. Assume $v(p) = 1$, then from $v(p \land q) = 0$ we can derive $v(q) = 0$. Subsequently, $v(p \land \neg q)$ will be $1$, which contradicts the derivation of the initial assumption, $v(p \land \neg q) = 0$, so $v(p) \not = 1$. Similarly, assume $v(p) = n$, then from $v(p \land q) = 0$ we can derive $v(q) = 0$, so $v(\neg q) = 1$, but $v(p \land \neg q)$ will be $n$, which contradicts the derivation of the initial assumption $v(p \land \neg q) = 0$, so $v(p) \not = n$. Overall, $v(p)$ is neither $1$ nor $n$, which contradicts the initial assumption. Therefore, there is no LP-counterexample, so the argument is LP-valid.
+
+\item
+Suppose the argument has a K3-counterexample, setting $v( (p \lor q) \land (p \lor \neg q) ) = 1$ and $v(p) = 0$ or $n$. Then, $v(p \lor q) = 1$ and $v(p \lor \neg q) = 1$. Assume $v(p) = 0$, then from $v(p \lor q) = 1$ we can derive $v(q) = 1$, but this will lead to $v(p \lor \neg q) = 0$, which contradicts the derivation of the initial assumption, $v(p \lor \neg q) = 1$, so $v(p) \not = 0$. Similarly, assume $v(p) = n$, then from $v(p \lor q) = 1$ we can derive $v(q) = 1$, but this will lead to $v(p \lor \neg q) = n$, which contradicts the derivation of the initial assumption, $v(p \lor \neg q) = 1$, so $v(p) \not = n$. Overall, $v(p)$ is neither $0$ or $n$, which contradicts the initial assumption. Therefore, there is no K3-counterexample, so the argument is K3-valid.
+
+It is LP-invalid since there is a LP-counterexample. Take a valuation $v$ with $v(p) = 0$ and $v(q) = n$. Then, $v(p \lor q) = n$, $v(\neg q) = n$, and $v(p \lor \neg q) = n$. Thus, the premise $v( (p \lor q) \land (p \lor \neg q) ) = n$ but the conclusion $v(p) = 0$.
+
+\end{enumerate}

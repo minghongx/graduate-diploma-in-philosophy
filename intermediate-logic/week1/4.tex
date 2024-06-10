@@ -1,0 +1,42 @@
+% \section*{Exercise 4}
+
+\begin{enumerate}
+\item
+  \begin{prooftree*}
+  \hypo{\Pi_1}
+  \infer[no rule]1{A \to B}
+  \hypo{[A]^1}
+  \infer2[\ce]{B}
+  \hypo{\Pi_2}
+  \infer[no rule]1{A \to C}
+  \hypo{[A]^1}
+  \infer2[\ce]{C}
+  \infer2[\ai]{B \land C}
+  \infer1[\ci{1}]{A \to (B \land C)}
+  \end{prooftree*}
+
+\item
+  \begin{prooftree*}
+  \hypo{\Pi}
+  \infer[no rule]1{A \to (B \to C)}
+  \hypo{[A \land B]^1}
+  \infer1[\ae]{A}
+  \infer2[\ce]{B \to C}
+  \hypo{[A \land B]^1}
+  \infer1[\ae]{A}
+  \infer2[\ce]{C}
+  \infer1[\ci{1}]{(A \land B) \to C}
+  \end{prooftree*}
+
+\item
+  \begin{prooftree*}
+  \hypo{\Pi}
+  \infer[no rule]1{(A \land B) \to C}
+  \hypo{[A]^2}
+  \hypo{[B]^1}
+  \infer2[\ai]{A \land B}
+  \infer2[\ce]{C}
+  \infer1[\ci{1}]{B \to C}
+  \infer1[\ci{2}]{A \to (B \to C)}
+  \end{prooftree*}
+\end{enumerate}

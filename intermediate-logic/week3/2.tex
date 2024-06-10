@@ -1,0 +1,25 @@
+FIXME: Refine the reasoning for statements that have not enough information to decide.
+
+\begin{enumerate}
+\item
+False. $v(C \land D)$ should not be \textit{false} since it generates a counterexample such that $A,B \not\vDash_{CL} C \land D$.
+
+\item
+Not enough information to decide. If $v(C) = 0$, we can only conclude that $v(A)$ and $v(B)$ should not be both true, i.e. $\neg (v(A) \land v(B))$, to prevent the generation of counterexample.
+
+\item
+True. We can apply the De Morgan's law to the conclusion of (b), $\neg (v(A) \land v(B))$, to transform it to $\neg v(A) \lor \neg v(B)$, which just means $v(A) = 0$ or $v(B) = 0$.
+
+\item
+True. $v(B)$ can only be \textit{false} since true generates a counterexample of the argument, $A,B \Yright C \land D$, which contradicts the assumption, $A,B \vDash_{CL} C \land D$.
+
+\item
+Not enough information to decide. The furthest we can conclude is $v(C \land D)$ can be either \textit{false} or \textit{true}. There is not enough information to support a further derivation to $v(C \land D) = 0$.
+
+\item
+Not enough information to decide. Similar to (e), the furthest we can conclude is that $v(A)$ can be either \textit{false} or \textit{true}.
+
+\item
+True. According to (a), $v(C \land D)$ should not be \textit{false}. In other words, $v(C \land D) = 1$. It follows that $v(\neg (C \land D)) = 0$.
+
+\end{enumerate}

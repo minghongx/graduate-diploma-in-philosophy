@@ -1,0 +1,13 @@
+We have proofed the base case in textbook (Logical Methods by Greg Restall and Shawn Standefer, Year 2023) page 92.
+
+For the inductive case, assume we have a proof $\Pi$ for $X \Yright A_1 \land A_2$ that is truth preserving. We then form a new proof using the $\land E$ rule.
+
+TODO: Add upside down triangle around the $\Pi$
+
+\begin{prooftree*}
+\hypo{X}
+\infer[no rule]1{\Pi}
+\infer[no rule]1{A_1 \land A_2}
+\infer1[\ae]{A_1}
+\end{prooftree*}
+We want to show that $X \vDash_{CL} A_1$. Assume there is a counterexample, so there is a Boolean model, $v$, such that $\forall B \in X \ni v(B) = 1$ and $v(A_1) = 0$. This contradicts the inductive hypothesis, $X \vDash_{CL} A_1 \land A_2$, since $v(A_1) = 0$ leads to $v(A_1 \land A_2) = 0$. Therefore, there is no counterexample. The other $\land E$ case, where the conclusion is $A_2$, is similar.

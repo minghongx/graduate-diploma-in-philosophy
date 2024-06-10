@@ -1,0 +1,44 @@
+\section*{QUESTION 3}
+
+\subsection*{Task 1}
+$\di$ is sound for LP-validity means if $X \vDash_{LP} A$, then $X \vDash_{LP} A \lor B$.
+
+\subsubsection*{Base case}
+The assumption rule provides the base case. The atomic proof, A, is a proof for $A \Yright A$. Let $v$ be a LP model such that the conclusion $v(A) = 0$, then the premise $v(A) = 0$. There is no way to construct an LP-counterexample. Therefore, the assumption rule is LP-valid.
+
+\subsubsection*{Inductive case for $\di$}
+We assume we have a proof $\Pi$ for $X \Yright A$ that is LP-valid, i.e. $X \vDash_{LP} A$. We then form a new proof using the $\di$ rule.
+\begin{prooftree*}
+\hypo{X}
+\infer[no rule]1{\Pi}
+\infer[no rule]1{A}
+\infer1[\di]{A \lor B}
+\end{prooftree*}
+We want to show that $X \vDash_{LP} A \lor B$. Assume there is a LP-counterexample, setting $v(X) = 1$ or $n$ and $v(A \lor B) = 0$. By definition, $v(A \lor B) = 0$ iff $v(A) = 0$ and $v(B) = 0$. $v(X) = 1$ or $n$ and $v(A) = 0$ contradicts the inductive hypothesis, $X \vDash_{LP} A$, since this is a LP-counterexample of it. Therefore, there is no LP-counterexample of $X \Yright A \lor B$, so $X \vDash_{LP} A \lor B$ if $X \vDash_{LP} A$.
+
+The other $\di$ case, where the conclusion is $B \lor A$, is similar.
+
+\subsection*{Task 2}
+Q2 (d) is $\ce$ case, which has been shown to be LP-invalid for Atoms. This means $X \vDash_{LP} A, Y \vDash_{LP} A \to B \Yright X,Y \not\vDash_{LP} B$.
+
+\subsection*{Task 3}
+$\di$ is sound for K3-validity means if $X \vDash_{K3} A, Y \vDash_{K3} B$, then $X,Y \vDash_{K3} A \land B$.
+
+\subsubsection*{Base case}
+Same as Task 2's base case proof.
+
+\subsubsection*{Inductive case for $\ai$}
+Assume proofs $\Pi_1$ for $X \Yright A$ and $\Pi_2$ for $Y \Yright B$ are both K3-valid, i.e. $X \vDash_{K3} A$ and $Y \vDash_{K3} B$. We then form a new proof using the $\ai$ rule.
+\begin{prooftree*}
+\hypo{X}
+\infer[no rule]1{\Pi_1}
+\infer[no rule]1{A}
+\hypo{Y}
+\infer[no rule]1{\Pi_2}
+\infer[no rule]1{B}
+\infer2[\ai]{A \land B}
+\end{prooftree*}
+We want to show that $X,Y \vDash_{K3} A \land B$. Suppose there is a K3-counterexample, setting $v(X, Y) = 1$ or $n$ and $v(A \land B) = 0$. If $v(A \land B) = 0$ then by definition either $v(A) = 0$ or $v(B) = 0$. $v(A) \not = 0$ since $v(A) = 0$ contradicts the inductive hypothesis that implies $v(X) = 1$ or $n$ then $v(A) = 1$ or $n$. Similarly, $v(B) \not = 0$. Thus, neither $v(A) = 0$ or $v(B) = 0$, which contradicts the derivation of the assumption, either $v(A) = 0$ or $v(B) = 0$. Therefore, there is no K3-counterexample, so $X,Y \vDash_{K3} A \land B$.
+
+\subsection*{Task 4}
+If $\ci{}$ were sound for K3-validity, then this means that $X,A \vDash_{K3} B \Yright X \vDash_{K3} A \to B$. This has a counterexample, $p,q \vDash_{K3} p \land q \Yright p \not\vDash_{K3} q \to (p \land q)$. $p,q \vDash_{K3} p \land q$ has been proofed in Q2 (a). $p \not\vDash_{K3} q \to (p \land q)$ since it has a K3-counterexample: $v(p) = 1$ and $v(q) = n$, then $v(q \to (p \land q)) = n$.

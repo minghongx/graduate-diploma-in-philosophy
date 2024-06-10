@@ -1,0 +1,58 @@
+\singlespacing
+
+\section*{QUESTION 1}
+
+\subsection*{Task 1}
+\begin{claim}
+$\bx \exists x Gx$ is true at worlds $w_1$ and $w_2$.
+\end{claim}
+
+\begin{proof}
+$I(Gx, w_1, v^x_a) = 1$, so $I(\exists x Gx, w_1, v) = 1$.
+
+Similarly, $I(Gx, w_2, v^x_b) = 1$, so $I(\exists x Gx, w_2, v) = 1$.
+
+$\forall w' \in W$, $I(\exists x Gx, w', v) = 1$. $\therefore$ $I(\bx \exists x Gx, w, v) = 1$.    
+\end{proof}
+
+\begin{claim}
+$\exists x \bx Gx$ is false at worlds $w_1$ and $w_2$.
+\end{claim}
+
+\begin{proof}
+$I(Gx, w_1, v^x_a) = 1$ and $I(Gx, w_2, v^x_a) = 0$, so $I(\bx Gx, w, v^x_a) = 0$.
+
+Similarly, $I(Gx, w_1, v^x_b) = 0$ and $I(Gx, w_2, v^x_b) = 1$, so $I(\bx Gx, w, v^x_b) = 0$.
+
+Similarly, $I(Gx, w_1, v^x_c) = 0$ and $I(Gx, w_2, v^x_c) = 1$, so $I(\bx Gx, w, v^x_c) = 0$.
+
+$\forall v': v' \sim_x v$, $I(\bx Gx, w, v') = 0$. $\therefore$ $I(\exists x \bx Gx, w, v) = 0$.
+\end{proof}
+
+\subsection*{Task 2}
+
+\begin{claim}
+$\diam \forall x Fx$ is false at worlds $w_1$ and $w_2$.
+\end{claim}
+
+\begin{proof}
+$I(\forall x Fx, w_1, v) = 0$ since there is a $v^x_b$ such that $I(Fx, w_1, v^x_b) = 0$.
+
+Similarly, $I(\forall x Fx, w_2, v) = 0$ since there is a $v^x_a$ such that $I(Fx, w_2, v^x_a) = 0$.
+
+$\forall w' \in W$, $I(\forall x Fx, w', v) = 0$. $\therefore$ $I(\diam \forall x Fx, w, v) = 0$.
+\end{proof}
+
+\begin{claim}
+$\forall x \diam Fx$ is true at worlds $w_1$ and $w_2$.
+\end{claim}
+
+\begin{proof}
+$I(\diam Fx, w, v^x_a) = 1$ since $I(Fx, w_1, v^x_a) = 1$.
+
+Similarly, $I(\diam Fx, w, v^x_b) = 1$ since $I(Fx, w_2, v^x_b) = 1$.
+
+Similarly, $I(\diam Fx, w, v^x_c) = 1$ since $I(Fx, w_1, v^x_c) = 1$.
+
+No matter which assignment of values to variable $x$, $\diam Fx$ is true. $\therefore$ $I(\forall x \diam Fx, w, v) = 1$.
+\end{proof}

@@ -1,0 +1,81 @@
+\section*{QUESTION 5}
+
+\subsection*{Task 1}
+We want to show $A \lor B \vdash_I \neg A \to B$.
+\begin{prooftree*}
+\hypo{A \lor B}
+\hypo{[A]^1}
+\hypo{[\neg A]^3}
+\infer2[\nege]{\bot}
+\infer1[\bote]{B}
+\hypo{[B]^2}
+\infer3[\de{1,2}]{B}
+\infer1[\ci{3}]{\neg A \to B}
+\end{prooftree*}
+
+\subsection*{Task 2}
+Take a valuation $v$ with $v(A) = n, v(B) = n$, so $v(\neg A) = 0$. Then the premise $v(\neg A \to B) = 1$ but the conclusion $v(A \lor B) = n$.
+
+\subsection*{Task 3}
+\begin{prooftree*}
+\hypo{A}
+\infer1[\di]{A \lor B}
+\infer[no rule]1{\Pi}
+\infer[no rule]1{\neg A \to B}
+\end{prooftree*}
+where $\Pi$ was shown in Task 1.
+
+Similarly,
+\begin{prooftree*}
+\hypo{B}
+\infer1[\di]{A \lor B}
+\infer[no rule]1{\Pi}
+\infer[no rule]1{\neg A \to B}
+\end{prooftree*}
+
+\subsection*{Task 4}
+To start with, we show $\neg A \to B \vdash_I \neg (\neg A \land \neg B)$:
+\begin{prooftree*}
+\hypo{[\neg A \land \neg B]^1}
+\infer1[\ae]{\neg A}
+\hypo{\neg A \to B}
+\infer2[\ce]{B}
+\hypo{[\neg A \land \neg B]^1}
+\infer1[\ae]{\neg B}
+\infer2[\nege]{\bot}
+\infer1[\negi{1}]{\neg (\neg A \land \neg B)}
+\end{prooftree*}
+
+Next, we show $\neg (\neg A \land \neg B) \vdash_{CL} \neg\neg A \lor \neg\neg B$ which is actually an instance of the De Morgan's laws:
+\begin{prooftree*}
+\fontsize{8}{9}\selectfont
+\hypo{[\neg\neg A]^1}
+\infer1[\di]{\neg\neg A \lor \neg\neg B}
+\hypo{[\neg (\neg\neg A \lor \neg\neg B)]^3}
+\infer2[\nege]{\bot}
+\infer1[\negi{1}]{\neg\neg\neg A}
+\infer1[\dne]{\neg A}
+\hypo{[\neg\neg B]^2}
+\infer1[\di]{\neg\neg A \lor \neg\neg B}
+\hypo{[\neg (\neg\neg A \lor \neg\neg B)]^3}
+\infer2[\nege]{\bot}
+\infer1[\negi{2}]{\neg\neg\neg B}
+\infer1[\dne]{\neg B}
+\infer2[\ai]{\neg A \land \neg B}
+\hypo{\neg (\neg A \land \neg B)}
+\infer2[\nege]{\bot}
+\infer1[\negi{3}]{\neg\neg (\neg\neg A \lor \neg\neg B)}
+\infer1[\dne]{\neg\neg A \lor \neg\neg B}
+\end{prooftree*}
+
+Finally, we show $\neg\neg A \lor \neg\neg B \vdash_{CL} A \lor B$:
+\begin{prooftree*}
+\hypo{\neg\neg A \lor \neg\neg B}
+\hypo{[\neg\neg A]^1}
+\infer1[\dne]{A}
+\infer1[\di]{A \lor B}
+\hypo{[\neg\neg B]^2}
+\infer1[\dne]{B}
+\infer1[\di]{A \lor B}
+\infer3[\de{1,2}]{A \lor B}
+\end{prooftree*}

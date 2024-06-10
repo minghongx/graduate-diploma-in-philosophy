@@ -1,0 +1,56 @@
+\begin{enumerate}[label=\roman*.]
+% FIXME: Avoid newline between enumeration and theorem
+\item \leavevmode \vspace{-1.75\baselineskip}
+\begin{claim}
+$\neg\neg p \not\vDash_{H3} p$
+\end{claim}
+\begin{proof}
+Take a valuation $v$ with $v(p) = \frac{1}{2}$. Then, $v(\neg\neg p) = 1$ and $v(p) = \frac{1}{2}$. This is an $H3$ counterexample which makes the premise true but the conclusion not true ($\frac{1}{2}$).
+\end{proof}
+
+
+\item \leavevmode \vspace{-1.75\baselineskip}
+\begin{claim}
+$\neg (p \land q) \vDash_{H3} \neg p \lor \neg q$
+\end{claim}
+\begin{proof}
+Suppose there is an $H3$ counterexample. $\neg (p \land q)$ would be true so $p \land q$ would be false. Then, either $p$ or $q$ is false as per the $H3$ truth table of conjunction. For each case, $\neg p \lor \neg q$ is true since either $\neg p$ or $\neg q$ is true, which contradicts the assumption that the conclusion is not true.
+\end{proof}
+
+\begin{claim}
+$\neg (p \land q) \not\vDash_{H5} \neg p \lor \neg q$
+\end{claim}
+\begin{proof}
+Take a valuation v with $v(p) = b$ and $v(q) = c$. Then $v(p \land q) = 0$, so $v(\neg (p \land q)) = 1$. In addition, $v(\neg p) = c$ and $v(\neg q) = b$, so $v(\neg p \lor \neg q) = 0$. This is an $H5$ counterexample.
+\end{proof}
+
+
+\item
+
+\item
+
+\item \leavevmode \vspace{-1.75\baselineskip}
+\begin{claim}
+$\vDash_{H3} \neg p \lor \neg\neg p$
+\end{claim}
+\begin{proof}
+Whatever value $p$ is got, either $\neg p$ is true when $p$ is $0$ or $\neg\neg p$ is true when $p$ is either $\frac{1}{2}$ or $1$, so $\neg p \lor \neg\neg p$ is always true.
+\end{proof}
+
+\begin{claim}
+$\not\vDash_{H5} \neg p \lor \neg\neg p$
+\end{claim}
+\begin{proof}
+Take a valuation v with $v(p) = b$. Then, $v(\neg p) = c$ and $v(\neg\neg p) = b$, so $v(\neg p \lor \neg\neg p) = 0$. This is an $H5$ counterexample.
+\end{proof}
+
+
+\item \leavevmode \vspace{-1.75\baselineskip}
+\begin{claim}
+$(p \to q) \to p \not\vDash_{H3} p$
+\end{claim}
+\begin{proof}
+Take a valuation $v$ with $v(p) = \frac{1}{2}$ and $v(q) = 0$. Then, $v(p \to q) = 0$ and $v((p \to q) \to p) = 1$. This is an $H3$ counterexample which makes the premise true but the conclusion not true ($\frac{1}{2}$).
+\end{proof}
+
+\end{enumerate}

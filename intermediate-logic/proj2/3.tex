@@ -1,0 +1,139 @@
+\section*{QUESTION 3}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\subsection*{Task 1}
+\begin{claim}
+$\bx \forall x Fx \vdash_{CDQS5} \forall x \bx Fx$
+\end{claim}
+
+\begin{proof}
+\begin{prooftree*}
+\hypo{\bx \forall x Fx}
+\infer1[\boxe]{\forall x Fx}
+\infer1[\une]{Fa}
+\infer1[\boxi]{\bx Fa}
+\infer1[\uni]{\forall x \bx Fx}
+\end{prooftree*}
+Here, since $\{ \bx \forall x Fx \}$ contains only modal formula, the $\bx I$ side condition is satisfied.
+Additionally, since the name $a$ does not occur in the conclusion $\forall x \bx Fx$ of the $\forall I$ inference step and in any assumption in $\{ \bx \forall x Fx \}$ upon which the premise of this step depends, the eigenvariable condition of $\forall I$ is satisfied.
+\end{proof}
+
+\begin{claim}
+$\exists x \diam Fx \vdash_{CDQS5} \diam \exists x Fx$
+\end{claim}
+
+\begin{proof}
+\begin{prooftree*}
+\hypo{\exists x \diam Fx}
+\hypo{[\diam Fa]^1}
+\hypo{[Fa]^2}
+\infer1[\boxi]{\bx Fa}
+\hypo{[\neg \bx Fa]^3}
+\infer2[\nege]{\bot}
+\infer2[\diame{2}]{\bot}
+\infer1[\negi{3}]{\neg \neg \bx Fa}
+\infer1[\dne]{\bx Fa}
+\infer1[\boxe]{Fa}
+\infer1[\exi]{\exists x Fx}
+\infer2[\exe{1}]{\exists x Fx}
+\infer1[\diami]{\diam \exists x Fx}
+\end{prooftree*}
+Satisfaction of side or eigenvalue condition of inference steps will be explained from top to bottom. \textcolor{Maroon}{\P}\
+The side condition of $\bx I$ is satisfied because there is no assumption upon which $[Fa]^2$ depends. \textcolor{Maroon}{\P}\
+The side condition of $\diam E^2$ is satisfied because $\{ Fa, \neg \bx Fa \} \setminus \{ Fa \}$ contains only model formula. Notice that the excluded set contains the discharged assumption of this $\diam E^2$ step and steps before the minor premise. \textcolor{Maroon}{\P}\
+The eigenvalue condition of $\exists E^1$ is satisfied because the name $a$ does not occur in $\{ \exists x \diam Fx, \exists x Fx \} \cup \{ \diam Fa, Fa, \neg \bx Fa \} \setminus \{ Fa, \neg \bx Fa, \diam Fa \}$. Notice that the excluded set contains the discharged assumption of this $\exists E^1$ step and steps before the minor premise.
+\end{proof}
+
+\subsection*{Task 2}
+
+\begin{definition}[Constant Domain Modal Formula]
+A formula is a \textit{constant domain modal formula} if and only if it has the form, $\forall x A(x)$, $\neg \exists x A(x)$, $\exists x A(x)$, or $\neg \forall x A(x)$, where $A(x)$ is a modal formula, namely, $\bx B(x)$, $\neg \diam B(x)$, $\diam B(x)$, or $\neg \bx B(x)$, where $B(x)$ is a formula.
+\end{definition}
+
+\begin{definition}[CDQS5 Side Condition]
+All assumptions upon which the premise of an application of the rule $\bx I$ and the assumptions upon which the minor premise of an application of $\diam E$ depend, excluding the assumption discharged by $\diam E$, are all \textit{constant domain modal formulas}.
+\end{definition}
+
+\begin{theorem}[Soundness]
+For any set $X$ of formulas, and for any formula $A$ in the language of constant domain quantified S5 (CDQS5) logic, if $X \vdash_{CDQS5} A$, then $X \vDash_{CDQS5} A$.
+\end{theorem}
+
+\begin{proof}
+The soundness of the rules other than $\bx I$ and $\diam E$ is unaffected by the new definitions. We will focus on the soundness of these two affected rules.
+
+Suppose a CDQS5 model, $M = \langle D, W, I \rangle$. Note that the accessibility relation R between worlds is an equivalance relation (reflexive, transitive, and symmetric) since CDQS5 is based on S5. Thus, all modal formula true at world $w_1 \in W$ are true at any world $w_2 \in W$ where $w_1 R w_2$.
+
+We will first prove the soundness of $\bx I$ rule.
+\begin{prooftree*}
+\hypo{X}
+\infer[no rule]1{\Pi}
+\infer[no rule]1{A}
+\infer1[\boxi]{\bx A}
+\end{prooftree*}
+Suppose $X \Yright A$ has no counterexample at any world and where the premises of $\bx I$ step satisfies the \textit{CDQS5 side condition}.
+
+Suppose a world $w_1 \in W$ is a counterexample to $X \Yright \bx A$, then each member of X is true at world $w_1$, and a world $w_2 \in W$ would be a counterexample to the argument $X \Yright A$. Since the side condition is satisfied, the members of X are \textit{constant domain model formula}: $\forall x B(x)$, $\neg \exists x B(x)$, $\exists x B(x)$, or $\neg \forall x B(x)$, where $B(x)$ is a modal formula. The strategy is to prove that each memebr of $X$ is also true at $w_2$, then $w_2$ is a counterexample to $X \Yright A$, which contradicts the hypothesis that $X \Yright A$ has no counterexample at any world, so the assumption is false.
+
+$\forall x B(x)$ is true at $w_1$ iff $B(x)[o/x]$ is true for every object $o \in D_{w_1}$, where $D_{w_1}$ denotes the domain of $w_1$. Since $w_1 R w_2$ and $B(x)[o/x]$ is a modal formula, we must have $B(x)[o/x]$ true at $w_2$ too. The domain of each world is the same as per the model definition, i.e., $D_{w_1} = D_{w_2}$, so $B(x)[o/x]$ is true for every object $o \in D_{w_2}$, as desired. Therefore, $\forall x B(x)$ is true at $w_2$.
+
+By the De Morgan principles for quantifiers, $\neg \exists x C(x) \vdash \forall x \neg C(x)$. If $C(x)$ is a modal formula, by definition, so is $\neg C(x)$. By semantic substitution and replacing $\forall x B(x)$ in the above reasoning with this De Morgan relation, we prove that $\neg \exists x B(x)$ is true at $w_2$.
+
+$\exists x B(x)$ is true at $w_1$ iff there is an object $o \in D_{w_1}$ such that $B(x)[o/x]$ is true. Since $B(x)[o/x]$ is a modal formula, we must have $B(x)[o/x]$ true at $w_2$ too. The domain of each world is the same, so $B(x)[o/x]$ is indeed true at $w_2$ since $o$ is also in $D_{w_2}$. Therefore, $\exists x B(x)$ is true at $w_2$.
+
+By the similar reasoning for $\neg \exists x C(x)$, we prove that $\neg \forall x B(x)$ is true at $w_2$.
+
+We have proved that each constant domain modal formula is true at $w_2$, i.e., each member of $X$ is true at $w_2$, so $A$ must be false at $w_2$ (recall that $w_2$ would be a counterexample to $X \Yright A$). This contradicts with the hypothesis that there is no counterexample to $X \Yright A$ at any world. Thus, it is not the case that there is a world serves a counterexample to $X \Yright \bx A$. Therefore, the $\bx I$ rule is \textit{sound} with the CDQS5 side condition.
+
+In addition, we proved that all constant domain modal formula true at a world are true at any world accessible from that world because in the reasoning, the choice of $w_1$ and $w_2$ is arbitrary as long as they satisfy $w_1 R w_2$. We will use this lemma to prove the soundness of $\diam E$ rule.
+\begin{prooftree*}
+\hypo{\diam A}
+\hypo{[A]^1}
+\hypo{X}
+\infer[no rule]2{\Pi}
+\infer[no rule]1{\bot}
+\infer2[\diame{1}]{\bot}
+\end{prooftree*}
+Suppose $X, A \Yright \bot$ has no counterexample at any world and where the minor premise of $\diam E$ satisfies the CDQS5 side condition.
+
+Suppose a world $w_1 \in W$ is a counterexample to $\diam A, X \Yright \bot$. Then, $\diam A$ and each member of $X$ are true at $w_1$. In consequence, $A$ must be true at some world $w_2$ where $w_1 R w_2$. We have known that all constant domain modal formula true at a world are true at any world accessible from that world. Thus, each member of $X$ are also true at $w_2$. Consequently, $w_2$ is a counterexample to $\diam A, X \Yright \bot$, which contradicts the hypothesis that $X, A \Yright \bot$ has no counterexample at any world. Thus, it is not the case that there is a world serves a counterexample to $\diam A, X \Yright \bot$. Therefore, the $\diam E$ rule is sound with the CDQS5 side condition.
+\end{proof}
+
+\begin{claim}
+$\forall x \bx Fx \vdash_{CDQS5} \bx \forall x Fx$, with the CDQS5 side condition.
+\end{claim}
+
+\begin{proof}
+\begin{prooftree*}
+\hypo{\forall x \bx Fx}
+\infer1[\une]{\bx Fa}
+\infer1[\boxe]{Fa}
+\infer1[\uni]{\forall x Fx}
+\infer1[\boxi]{\bx \forall x Fx}
+\end{prooftree*}
+Here, since the name $a$ does not occur in the conclusion $\forall x Fx$ of the $\forall I$ inference step and in any assumption in $\{ \forall x \bx Fx \}$ upon which the premise of this step depends, the eigenvariable condition of $\forall I$ is satisfied.
+Furthermore, since $\{ \forall x \bx Fx \}$ contains only \textit{constant domain modal formula}, the CDQS5 side condition of $\bx I$ is satisfied.
+\end{proof}
+
+\begin{claim}
+$\diam \exists x Fx \vdash_{CDQS5} \exists x \diam Fx$, with the CDQS5 side condition.
+\end{claim}
+
+\begin{proof}
+\begin{prooftree*}
+\hypo{\diam \exists x Fx}
+\hypo{[\exists x Fx]^1}
+\hypo{[Fa]^2}
+\infer1[\diami]{\diam Fa}
+\infer1[\exi]{\exists x \diam Fa}
+\hypo{[\neg \exists x \diam Fx]^3}
+\infer2[\nege]{\bot}
+\infer2[\exe{2}]{\bot}
+\infer2[\diame{1}]{\bot}
+\infer1[\negi{3}]{\neg \neg \exists x \diam Fx}
+\infer1[\dne]{\exists x \diam Fx}
+\end{prooftree*}
+The eigenvalue condition of $\exists E^2$ is satisfied because the name $a$ does not occur in \\ $\{ \exists x Fx, \bot \} \cup \{ Fa, \neg \exists x \diam Fx \} \setminus \{ Fa \}$.
+Furthermore, the CDQS5 side condition of $\diam E^1$ is satisfied because $\{ \exists x Fx, Fa, \neg \exists x \diam Fx \} \setminus \{ \exists x Fx, Fa \}$ contains only \textit{constant domain model formula}.
+\end{proof}

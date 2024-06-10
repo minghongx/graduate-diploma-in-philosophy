@@ -1,0 +1,93 @@
+First of all, we need to define the interpretation clearly.
+
+\begin{center}
+\begin{tblr}{
+  width=0.85\textwidth,
+  colspec={X[c]X[c]X[c]},
+}
+  \begin{tblr}{c|c}
+    & $I$ & \\
+    \hline[solid]
+    $a_0$ & $0$ \\
+    $a_1$ & $1$ \\
+    $a_2$ & $2$ \\
+    $\vdots$ & $\vdots$
+  \end{tblr}
+  &
+  \begin{tblr}{c|c}
+    & $I(O)$ & \\
+    \hline[solid]
+    $0$ & $0$ \\
+    $1$ & $1$ \\
+    $2$ & $0$ \\
+    $\vdots$ & $\vdots$
+  \end{tblr}
+  &
+  \begin{tblr}{c|cccc}
+    $I(S)$ & $0$ & $1$ & $2$ & $\cdots$ \\
+    \hline[solid]
+    $0$ & $0$ & $1$ & $1$ & $\cdots$ \\
+    $1$ & $0$ & $0$ & $1$ & $\cdots$ \\
+    $2$ & $0$ & $0$ & $0$ & $\cdots$ \\
+    $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$
+  \end{tblr}
+\end{tblr}
+\end{center}
+
+
+\begin{enumerate}[label=(\roman*)]
+\item
+$I(Oa_1) = I(O)(I(a_1)) = I(O)(1) = 1$
+
+$I(Oa_2) = \cdots = 0$
+
+$I(Sa_1a_1) = \cdots = 0$
+
+$I(Sa_1a_2) = \cdots = 1$
+
+$ I(Sa_2a_1) = \cdots = 0$
+
+\item
+\begin{equation} \label{eq:5}
+\begin{split}
+I(Sa_0y,v^y_0) &= I(S)(I(a_0,v^y_0),I(y,v^y_0)) \\
+&= I(S)(I(a_0),v^y_0(y)) \\
+&= I(S)(0,0) \\
+&= 0
+\end{split}
+\end{equation}
+Since for some $u$, $u \sim_y v$, $I(Sa_0y, v) = 0$, therefore $I(\forall y Sa_0y, v) = 0$.
+
+\item
+$I(\exists x \forall y Sxy, v) = 0$
+
+\textcolor{red}{How to articulate this?}
+
+\item
+$I(\exists x Sxa_1, v)$ since $I(Sxa_1, v^x_0) = 1$.
+
+\item
+$I(\exists y Sa_{10000}y, v)$ since $I(Sa_{10000}y, v^x_{10001}) = 1$.
+
+\item
+$I(\forall x \exists y Sxy, v) = 1$
+
+\textcolor{red}{How to articulate this?}
+
+\item
+$I(\forall x (Ox \to \exists y Syx), v) = 1$
+
+\textcolor{red}{How to articulate this?}
+
+\item
+$I(\exists y \forall x (Ox \to Syx), v) = 1$
+
+\textcolor{red}{How to articulate this?}
+
+\item
+$I(\forall x \forall y (Sxy \to \exists z (Sxz \land Szy), v) = 0$
+
+The idea is that $x$ and $y$ are adjacent numbers.
+\textcolor{red}{How to articulate this?}
+
+\end{enumerate}

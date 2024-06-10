@@ -1,0 +1,132 @@
+\begin{enumerate}[label=(\roman*)]
+\item
+Let $M = \langle D, I \rangle$ be the model such that $D = \{m, n\}$ and $I$ defined as
+\begin{center}
+\begin{tblr}{
+  colspec={c|c|c},
+}
+& $I(F)$ & $I(G)$ \\
+\hline[solid]
+$m$ & $1$ & $0$ \\
+$n$ & $0$ & $1$ \\
+\end{tblr}
+\end{center}
+Let $v$ be an assignment whose two x-variant are $v^x_m$ and $v^x_n$. This provides a counterexample to $\exists x Fx, \exists x Gx \Yright \exists x (Fx \land Gx)$.
+
+The assignment $v^x_m$ yields
+\begin{align}
+\begin{split} \label{eq:1}
+I(Fx,v^x_m) &= I(F)(I(x,v^x_m)) \\
+&= I(F)(v^x_m(x)) \\
+&= I(F)(m) \\
+&= 1
+\end{split} \\
+I(Gx,v^x_m) &= \cdots = 0 \label{eq:2}
+\end{align}
+
+The assignment $v^x_n$ yields
+\begin{align}
+I(Fx,v^x_n) &= \cdots = 0 \label{eq:3} \\
+I(Gx,v^x_n) &= \cdots = 1 \label{eq:4}
+\end{align}
+
+Since $v^x_m \sim_x v$ and $I(Fx,v^x_m) = 1$, $I(\exists x Fx, v) = 1$. Since $v^x_n \sim_x v$ and $I(Gx,v^x_n) = 1$, $I(\exists x Gx, v) = 1$. Thus, $I(A, v) = 1$ for each $A \in \{ \exists x Fx, \exists x Gx \}$, i.e., the premises are \textit{true}.
+
+Since $I(Fx,v^x_m) = 1$ and $I(Gx,v^x_m) = 0$, $I(Fx \land Gx, v^x_m) = 0$. Similarly, $I(Fx \land Gx, v^x_n) = 0$. For every assignment $u \sim_x v$, $I(Fx \land Gx, u) = 0$, so $I(\exists x (Fx \land Gx), v) = 0$, i.e., the conclusion is \textit{false}.
+
+\item
+\begin{prooftree*}
+\hypo{\exists x Fx}
+\hypo{[Fa]^1}
+\hypo{\forall x Gx}
+\infer1[\une]{Ga}
+\infer2[\ai]{Fa \land Ga}
+\infer1[\exi]{\exists x (Fx \land Gx)}
+\infer2[\exe{1}]{\exists x (Fx \land Gx)}
+\end{prooftree*}
+
+\item
+Suppose the argument has a counterexample, setting $I(\exists x (Fx \to \forall y Fy), v) = 0$. Then, there is an object $o \in D$ such that $I(Fx \to \forall y Fy, v^x_o) = 0$. So, $I(Fx, v^x_o) = 1$ and $I(\forall y Fy, v^x_o) = 0$. The former implies $I(F)(o) = 1$. The latter implies for some $u \sim_y v^x_o$, $I(Fy, u) = 0$. The counterexample needs to satisfy these two conditions. We can construct a counterexample as follows:
+\begin{center}
+\begin{tblr}{
+  width=0.5\textwidth,
+  colspec={X[c]X[c]},
+}
+  $D = \{ m, n\}$
+  &
+  \begin{tblr}{c|c}
+    & $I(F)$ & \\
+    \hline[solid]
+    $m$ & $1$ \\
+    $n$ & $0$ \\
+  \end{tblr}
+\end{tblr}
+\end{center}
+Set arbitrary object $o$ to $m$. $I(Fx, v^x_m) = 1$ satisfies the first condition, $I(F)(m) = 1$. \\ $I(Fy, (v^x_m)^y_n) = 0$ satisfies the second: for some $u \sim_y v^x_m$, $I(Fy, u) = 0$. Therefore, this model and assignment is a counterexample to the argument.
+
+\item
+Let $M = \langle D, I \rangle$ be the model such that
+\begin{center}
+\begin{tblr}{
+  width=0.5\textwidth,
+  colspec={X[c]X[c]},
+}
+  $D = \{ m, n\}$
+  &
+  \begin{tblr}{c|cc}
+    $I(R)$ & m & n\\
+    \hline[solid]
+    m & $0$ & $1$ \\
+    n & $0$ & $1$
+  \end{tblr}
+\end{tblr}
+\end{center}
+
+This model provides a counterexample to the argument. The reasoning is represented in a diagram.
+\begin{center}
+\begin{tikzpicture}[
+  >=stealth',
+  node distance=1mm and 8mm,
+  world/.style={
+    ellipse,
+    draw=black!66,
+    fill=black!10,
+    thick,
+    minimum width=2.7cm,
+    minimum height=1.2cm,
+    font=\small
+  },
+  every label/.style={
+    Maroon,
+    font=\footnotesize
+  },
+  form/.style={font=\footnotesize}
+]
+\node [world] (v_1) [label=above:$v_1$] {x : m, y : n};
+\node [world] (v_2) [label=above:$v_2$, right= 25mm of v_1] {x : m, y : m};
+\node [world] (v_3) [label=above:$v_3$, below= 30mm of v_1] {x : n, y : n};
+\node [world] (v_4) [label=above:$v_4$, right= 25mm of v_3] {x : n, y : m};
+
+\node [form] (v_1_1) [below=of v_1] {$Rxy$};
+\node [form] (v_2_1) [below=of v_2] {$\neg Rxy$};
+\node [form] (v_3_1) [below=of v_3] {$Rxy$};
+\node [form] (v_4_1) [below=of v_4] {$\neg Rxy$};
+
+\node [form] (v_1_2) [below=of v_1_1] {$\exists y Rxy$, $\exists x Rxy$};
+\node [form] (v_2_2) [below=of v_2_1] {$\exists y Rxy$, $\neg \exists x Rxy$};
+\node [form] (v_3_2) [below=of v_3_1] {$\exists y Rxy$, $\exists x Rxy$};
+\node [form] (v_4_2) [below=of v_4_1] {$\exists y Rxy$, $\neg \exists x Rxy$};
+
+\node [form] (v_1_3) [below=of v_1_2] {$\forall x \exists y Rxy$, $\neg \forall y \exists x Rxy$};
+\node [form] (v_2_3) [below=of v_2_2] {$\forall x \exists y Rxy$, $\neg \forall y \exists x Rxy$};
+\node [form] (v_3_3) [below=of v_3_2] {$\forall x \exists y Rxy$, $\neg \forall y \exists x Rxy$};
+\node [form] (v_4_3) [below=of v_4_2] {$\forall x \exists y Rxy$, $\neg \forall y \exists x Rxy$};
+\end{tikzpicture}
+\end{center}
+
+\textcolor{red}{How to articulate this?}
+
+\item
+
+\end{enumerate}
+\newpage

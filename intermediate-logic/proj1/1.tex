@@ -1,0 +1,47 @@
+\section*{QUESTION 1}
+
+% TODO: Put the text right next to the table
+\begin{center}
+\begin{tblr}{
+  colspec={ll||llllll},
+}
+$p$ & $q$ & $p$ & $\land$ & $\neg$ & $p$ & $\Yright$ & $q$ \\
+\hline[solid]
+0 & 0 & 0 & 0 & 1 & 0 & & 0 \\
+0 & n & 0 & 0 & 1 & 0 & & n \\
+0 & 1 & 0 & 0 & 1 & 0 & & 1 \\
+% \SetRow{bg=gray!10}
+\SetRow{violet8} n & 0 & n & n & n & n & & 0 \\
+n & n & n & n & n & n & & n \\
+n & 1 & n & n & n & n & & 1 \\
+1 & 0 & 1 & 0 & 0 & 1 & & 0 \\
+1 & n & 1 & 0 & 0 & 1 & & n \\
+1 & 1 & 1 & 0 & 0 & 1 & & 1 \\
+\end{tblr}
+\end{center}
+
+The highlighted model such that $v(p \land \neg p) = n$ and $v(q) = 0$ is a LP-counterexample, so $p \land \neg p \not\vDash_{LP} q$.
+
+There is no K3-counterexample since there is no model such that the valuation of the only premise equals $1$, i.e. $v(p \land \neg p) = 1$.
+
+\begin{center}
+\begin{tblr}{
+  colspec={ll||llllll},
+}
+$p$ & $q$ & $p$ & $\Yright$ & $q$ & $\lor$ & $\neg$ & $q$ \\
+\hline[solid]
+0 & 0 & 0 & & 0 & 1 & 1 & 0 \\
+0 & n & 0 & & n & n & n & n \\
+0 & 1 & 0 & & 1 & 1 & 0 & 1 \\
+n & 0 & n & & 1 & 1 & 0 & 1 \\
+n & n & n & & 1 & n & 0 & 1 \\
+n & 1 & n & & 1 & 1 & 0 & 1 \\
+1 & 0 & 1 & & 1 & 1 & 0 & 1 \\
+\SetRow{violet8} 1 & n & 1 & & 1 & n & 0 & 1 \\
+1 & 1 & 1 & & 1 & 1 & 0 & 1 \\
+\end{tblr}
+\end{center}
+
+The highlighted model such that $v(p) = 1$ and $v(q \lor \neg q) = n$ is a K3-counterexample, so $p \not\vDash_{K3} q \land \neg q$.
+
+There is no LP-counterexample since there is no model such that the conclusion $v(q \lor \neg q) = 0$.

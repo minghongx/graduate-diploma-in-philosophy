@@ -1,0 +1,71 @@
+\section*{QUESTION 2}
+The example suggests a proof pattern that can be applied to all these four arguments.
+
+\subsection*{Task 1}
+
+\begin{claim}
+$\forall x \bx Fx \vDash_{CDQS5} \bx \forall x Fx$
+\end{claim}
+
+\begin{proof}
+Suppose we have a model $M = \langle D, W, I \rangle$ such that $I(\forall x \bx Fx, w, v) = 1$.
+\begin{align*}
+I(\forall x \bx Fx, w, v) = 1
+&\mathbin{\mathit{iff}}\ I(\bx Fx, w, v') = 1, \forall v': v' \sim_x v \\
+&\mathbin{\mathit{iff}}\ I(Fx, w', v') = 1, \forall v': v' \sim_x v, \forall w' \in W \\
+&\mathbin{\mathit{iff}}\ I(\forall x Fx, w', v) = 1, \forall w' \in W \\
+&\mathbin{\mathit{iff}}\ I(\bx \forall x Fx, w, v) = 1
+\end{align*}
+We have shown that in any model, in any world, and any assignments of values, if $\forall x \bx Fx$ is true, so is $\bx \forall x Fx$.
+\end{proof}
+
+\begin{claim}
+$\diam \exists x Fx \vDash_{CDQS5} \exists x \diam Fx$
+\end{claim}
+
+\begin{proof}
+Suppose we have a model $M = \langle D, W, I \rangle$ such that $I(\diam \exists x Fx, w, v) = 1$.
+\begin{align*}
+I(\diam \exists x Fx, w, v) = 1
+&\mathbin{\mathit{iff}}\ I(\exists x Fx, w', v) = 1, \exists w' \in W \\
+&\mathbin{\mathit{iff}}\ I(Fx, w', v') = 1, \exists w' \in W, \exists v': v' \sim_x v \\
+&\mathbin{\mathit{iff}}\ I(\diam Fx, w, v') = 1, \exists v': v' \sim_x v \\
+&\mathbin{\mathit{iff}}\ I(\exists x \diam Fx, w, v) = 1
+\end{align*}
+We have shown that in any model, in any world, and any assignments of values, if $\diam \exists x Fx$ is true, so is $\exists x \diam Fx$.
+\end{proof}
+
+
+\subsection*{Task 2}
+
+\begin{claim}
+$\bx \forall x Fx \vDash_{CDQS5} \forall x \bx Fx$
+\end{claim}
+
+\begin{proof}
+Suppose we have a model $M = \langle D, W, I \rangle$ such that $I(\bx \forall x Fx, w, v) = 1$.
+\begin{align*}
+I(\bx \forall x Fx, w, v) = 1
+&\mathbin{\mathit{iff}}\ I(\forall x Fx, w', v) = 1, \forall w' \in W \\
+&\mathbin{\mathit{iff}}\ I(Fx, w', v') = 1, \forall w' \in W, \forall v': v' \sim_x v \\
+&\mathbin{\mathit{iff}}\ I(\bx Fx, w, v') = 1, \forall v': v' \sim_x v \\
+&\mathbin{\mathit{iff}}\ I(\forall x \bx Fx, w, v) = 1
+\end{align*}
+We have shown that in any model, in any world, and any assignments of values, if $\bx \forall x Fx$ is true, so is $\forall x \bx Fx$.
+\end{proof}
+
+\begin{claim}
+$\exists x \diam Fx \vDash_{CDQS5} \diam \exists x Fx$
+\end{claim}
+
+\begin{proof}
+Suppose we have a model $M = \langle D, W, I \rangle$ such that $I(\exists x \diam Fx, w, v) = 1$.
+\begin{align*}
+I(\exists x \diam Fx, w, v) = 1
+&\mathbin{\mathit{iff}}\ I(\diam Fx, w, v') = 1, \exists v': v' \sim_x v \\
+&\mathbin{\mathit{iff}}\ I(Fx, w', v') = 1, \exists v': v' \sim_x v, \exists w' \in W \\
+&\mathbin{\mathit{iff}}\ I(\exists x Fx, w', v) = 1, \exists w' \in W \\
+&\mathbin{\mathit{iff}}\ I(\diam \exists x Fx, w, v) = 1
+\end{align*}
+We have shown that in any model, in any world, and any assignments of values, if $\exists x \diam Fx$ is true, so is $\diam \exists x Fx$.
+\end{proof}

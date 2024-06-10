@@ -1,0 +1,17 @@
+% \section*{Exercise 1}
+
+Forms that are formulas:
+\begin{itemize}
+\item $p \lor q$
+\item $\neg\neg p$
+\item $(p \to q) \to ((p \to (q \to r)) \to (p \to q))$
+\end{itemize}
+
+Ambiguous forms:
+\begin{itemize}
+\item $p \lor q \to r$ which can be disambiguated to $(p \lor q) \to r$ or $p \lor (q \to r)$
+\item $p \land (q \lor r) \to \bot$ which can be disambiguated to $(p \land (q \lor r)) \to \bot$ or $p \land ((q \lor r) \to \bot)$
+\item $p \land q \land r$ which can be disambiguated to $(p \land q) \land r$ or $p \land (q \land r)$
+\end{itemize}
+
+Finally, $q \neg p$ is not a formula because the negation ($\neg$) is a unary logical connective.

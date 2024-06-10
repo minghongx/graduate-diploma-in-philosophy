@@ -1,0 +1,17 @@
+\begin{enumerate}
+\item
+This has a counterexample, setting $v(p) = 1$ and $v(q) = 0$. Then, we have $v(\neg (p \land q)) = 1$ but $v(\neg p \land \neg q) = 0$, so $\neg (p \land q) \not\vDash_{CL} \neg p \land \neg q$.
+
+\item
+Suppose we have a counterexample, v, so $v(p \to q) = 1$ and $v(q \to r) = 1$ but $v(p \to r) = 0$. The latter implies that $v(p) = 1$ and $v(r) = 0$. $v(q)$ must be \textit{true} to make the first premise, $v(p \to q)$, \textit{true}. It follows directly that the second premise will be \textit{false}, i.e. $v(q \to r) = 0$, since we set $v(q) = 1$ in the last inference, which contradicts the assumption that $v(q \to r) = 1$. Therefore, there is no counterexample, so $p \to q, q \to r \vDash_{CL} p \to r$.
+
+\item
+
+\item
+
+\item
+
+\item
+$v(\emptyset) = 1$ by default. Suppose we have a counterexample, $v$, so $v( ((p \to q) \to p) \to p ) = 0$. We can derive that $v((p \to q) \to p) = 1$ and $v(p) = 0$. The former whose consequent, $p$, evaluated to $0$ leads to $v(p \to q) = 0$ but the latter implies $v(p \to q) = 1$, which contradicts the assumption that $v$ was a counterexample. Thus, $\vDash_{CL} ((p \to q) \to p) \to p$.
+
+\end{enumerate}

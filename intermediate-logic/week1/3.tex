@@ -1,0 +1,35 @@
+% \section*{Exercise 3}
+
+\begin{itemize}
+\item
+  \begin{prooftree*}
+  \hypo{[r \to p]^2}
+  \hypo{[r]^1}
+  \infer2[\ce]{p}
+  \hypo{p \to q}
+  \infer2[\ce]{q}
+  \infer1[\ci{1}]{r \to q}
+  \infer1[\ci{2}]{(r \to p) \to (r \to q)}
+  \end{prooftree*}
+
+\item
+  \begin{prooftree*}
+  \hypo{p}
+  \hypo{[q]^1}
+  \infer2[\ai]{p \land q}
+  \infer1[\ci{1}]{q \to (p \land q)}
+  \end{prooftree*}
+
+\item
+  \begin{prooftree*}
+  \hypo{p \land (q \to r)}
+  \infer1[\ae]{p}
+  \hypo{p \land (q \to r)}
+  \infer1[\ae]{q \to r}
+  \hypo{[q]^1}
+  \infer2[\ce]{r}
+  \infer2[\ai]{p \land r}
+  \infer1[\ci{1}]{q \to (p \land r)}
+  \end{prooftree*}
+
+\end{itemize}

@@ -1,0 +1,17 @@
+\section*{QUESTION 4}
+
+The motivation for using K3 and LP instead of classical two-value logic primarily arises from two issues: vagueness and semantic paradoxes. Let's discuss the vagueness first.
+
+We have vague concepts such as \textit{red}, \textit{child}, and \textit{heap}. These concepts do not have a sharp boundary. For example,
+\begin{center}
+\begin{tikzpicture}
+\shade[left color=yellow, right color=red] (0,0) rectangle (10,1);
+\end{tikzpicture}
+\end{center}
+the right of this colour ribbon is clearly red, and the left is clearly not red; however, the adjacent area can not be told apart. There are objects of which it is neither definitely red nor definitely not red. It is nature to come up with a three-fold division to capture this intermediate region between true and false.
+
+Semantic paradoxes, such as the Liar paradox, reveal a problem: assigning true and false values to statements can lead to contradictions from these statements even though these statements are conform to language rules, i.e. semantically correct statements could be inconsistent in classical logic. K3 and LP can accommodate the inconsistency revealed by semantic paradoxes in respect of validity.
+
+They are not the ultimate answer to these two issues. Introducing a third value to represent the vagueness increases the number of boundaries from one to two, namely, the boundary between true and intermediate, and between intermediate and false. The approach of introducing more values can only increase the resolution of vagueness but cannot eliminate it. Moving on to the second issue, although K3 and LP accommodate the inconsistency of semantic paradoxes in respect of validity, they have made some important logical activities such as determining truth and falsity and searching for truth and falsity more challenging.
+
+References: Concepts without boundaries by Mark Sainsbury and Logical Methods by Greg Restall and Shawn Standefer, pp. 108-110.

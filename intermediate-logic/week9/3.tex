@@ -1,0 +1,69 @@
+\begin{itemize}
+\item
+
+\item
+
+\item
+
+\item
+
+\item
+
+\item
+  \begin{prooftree*}
+  \hypo{\forall x (A(x) \land B(x))}
+  \infer1[\une]{A(a) \land B(a)}
+  \infer1[\ae]{A(a)}
+  \infer1[\uni]{\forall x A(x)}
+  \hypo{\forall x (A(x) \land B(x))}
+  \infer1[\une]{A(a) \land B(a)}
+  \infer1[\ae]{B(a)}
+  \infer1[\uni]{\forall x B(x)}
+  \infer2[\ai]{\forall x A(x) \land \forall x B(x)}
+  \end{prooftree*}
+
+  \begin{prooftree*}
+  \hypo{\forall x A(x) \land \forall x B(x)}
+  \infer1[\ae]{\forall x A(x)}
+  \infer1[\une]{A(a)}
+  \hypo{\forall x A(x) \land \forall x B(x)}
+  \infer1[\ae]{\forall x B(x)}
+  \infer1[\une]{B(a)}
+  \infer2[\ai]{A(a) \land B(a)}
+  \infer1[\uni]{\forall x (A(x) \land B(x))}
+  \end{prooftree*}
+
+\item
+  \begin{prooftree*}
+  \hypo{\exists x (A(x) \lor B(x))}
+  \hypo{[A(a) \lor B(a)]^1}
+  \hypo{[A(a)]^2}
+  \infer1[\exi]{\exists x A(x)}
+  \infer1[\di]{\exists x A(x) \lor \exists x B(x)}
+  \hypo{[B(a)]^3}
+  \infer1[\exi]{\exists x B(x)}
+  \infer1[\di]{\exists x A(x) \lor \exists x B(x)}
+  \infer3[\de{2,3}]{\exists x A(x) \lor \exists x B(x)}
+  \infer2[\exe{1}]{\exists x A(x) \lor \exists x B(x)}
+  \end{prooftree*}
+
+  \begin{prooftree*}
+  \hypo{\exists x A(x) \lor \exists x B(x)}
+  \hypo{[\exists x A(x)]^1}
+  \hypo{[A(a)]^2}
+  \infer1[\di]{A(a) \lor B(a)}
+  \infer1[\exi]{\exists x (A(x) \lor B(x))}
+  \infer2[\exe{2}]{\exists x (A(x) \lor B(x))}
+  \hypo{[\exists x B(x)]^3}
+  \hypo{[B(a)]^4}
+  \infer1[\di]{A(a) \lor B(a)}
+  \infer1[\exi]{\exists x (A(x) \lor B(x))}
+  \infer2[\exe{4}]{\exists x (A(x) \lor B(x))}
+  \infer3[\de{1,3}]{\exists x (A(x) \lor B(x))}
+  \end{prooftree*}
+
+\item
+
+\item
+
+\end{itemize}
