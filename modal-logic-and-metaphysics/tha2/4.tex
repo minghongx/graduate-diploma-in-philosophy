@@ -1,0 +1,30 @@
+% F&M 1st ed. Ch. 11 Exercise 11.2.4
+% Week 7 Slide 17 an informal counterexample & Slide 14 F&M 1st ed. Def. 11.1.4. item 10
+\section*{QUESTION 4}
+Formula 2 is invalid. Suppose $t$ does not designate at the world of evaluation. By Definition 11.1.4 item 10 in the Fitting-Mendelsohn textbook 1st ed., $\langle \lambda x. \Phi \rangle(t)$ is false at that world, so $\neg \langle \lambda x. \Phi \rangle(t)$ is true at that world. On the other hand, by the same definition, $\langle \lambda x. \neg \Phi \rangle(t)$ is false at that world. This world at which $t$ does not designate provides a counterexample of $\neg \langle \lambda x. \Phi \rangle(t) \supset \langle \lambda x. \neg \Phi \rangle(t)$.
+
+Formula 1, 3, and 4 are valid. Let $\mathcal{M} = \langle \mathcal{G}, \mathcal{R}, \mathcal{D}, \mathcal{I} \rangle$ be a model, $v$ be a valuation, and $w \in \mathcal{G}$.
+\begin{proof}
+\begin{align*}
+\mathcal{M}, w \Vdash_{v} \langle \lambda x. \neg\Phi \rangle(t)
+&\iff \mathcal{M}, w \Vdash_{v'} \neg\Phi, \text{where $v' \sim_x v$ such that $v'(x) = \mathcal{I}(t, w)$} \\
+&\iff \mathcal{M}, w \not\Vdash_{v'} \Phi, \text{where $v' \sim_x v$ such that $v'(x) = \mathcal{I}(t, w)$} \\
+&\iff \mathcal{M}, w \not\Vdash_{v} \langle \lambda x. \Phi \rangle(t) \\
+&\iff \mathcal{M}, w \Vdash_{v} \neg \langle \lambda x. \Phi \rangle(t)
+\end{align*}
+\begin{align*}
+\mathcal{M}, w \Vdash_{v} \langle \lambda x. (\Phi \supset \Psi) \rangle(t)
+&\iff \mathcal{M}, w \Vdash_{v'} \Phi \supset \Psi, \text{where $v' \sim_x v$ such that $v'(x) = \mathcal{I}(t, w)$} \\
+&\iff \mathcal{M}, w \Vdash_{v'} \Phi \implies \mathcal{M}, w \Vdash_{v'} \Psi, \text{where $v' \sim_x v$ such that $v'(x) = \mathcal{I}(t, w)$} \\
+&\iff \mathcal{M}, w \Vdash_{v} \langle \lambda x. \Phi \rangle(t) \implies \mathcal{M}, w \Vdash_{v} \langle \lambda x. \Psi \rangle(t) \\
+&\iff \mathcal{M}, w \Vdash_{v} \langle \lambda x. \Phi \rangle(t) \supset \langle \lambda x. \Psi \rangle(t)
+\end{align*}
+\begin{align*}
+\mathcal{M}, w \Vdash_{v} \langle \lambda x. \Phi \rangle(t) \supset \langle \lambda x. \Psi \rangle(t) &\iff \\
+\mathcal{M}, w \Vdash_{v} \langle \lambda x. \Phi \rangle(t) \implies \mathcal{M}, w \Vdash_{v} \langle \lambda x. \Psi \rangle(t) &\iff \\
+\mathcal{M}, w \Vdash_{v'} \Phi \implies \mathcal{M}, w \Vdash_{v'} \Psi, \text{where $v' \sim_x v$ such that $v'(x) = \mathcal{I}(t, w)$} &\iff \\
+\mathcal{M}, w \Vdash_{v'} \Phi \supset \Psi, \text{where $v' \sim_x v$ such that $v'(x) = \mathcal{I}(t, w)$} &\iff \\
+\mathcal{M}, w \Vdash_{v} \langle \lambda x. (\Phi \supset \Psi) \rangle(t)
+\end{align*}
+In summary, these formulae are valid because the truth of the antecedent guarantees that $t$ is designated at the world being evaluated.
+\end{proof}

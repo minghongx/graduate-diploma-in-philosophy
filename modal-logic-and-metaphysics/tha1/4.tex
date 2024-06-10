@@ -1,0 +1,49 @@
+\section*{QUESTION 4}
+\begin{enumerate}[label=\alph*)]
+\item
+\begin{proof}
+Consider an arbitrary constant domain first-order model $\mathcal{M} = \langle \mathcal{G}, \mathcal{R}, \mathcal{D}, \mathcal{I} \rangle$. We want to show that, for any arbitrary valuation $v$ and possible world $w \in \mathcal{G}$, we have $\mathcal{M}, w \Vdash_{v} \forall x \bx Fx \iff \mathcal{M}, w \Vdash_{v} \bx \forall x Fx$.
+\begin{align*}
+\mathcal{M}, w \Vdash_{v} \forall x \bx Fx
+&\iff \mathcal{M}, w \Vdash_{v'} \bx Fx, \forall v' \colon v' \sim_x v \\
+&\iff \mathcal{M}, w' \Vdash_{v'} Fx, \forall v' \colon v' \sim_x v, \forall w' \colon w\mathcal{R}w' \\
+&\iff \mathcal{M}, w' \Vdash_{v} \forall x Fx, \forall w' \colon w\mathcal{R}w' \\
+&\iff \mathcal{M}, w \Vdash_{v} \bx \forall x Fx
+\end{align*}
+We have shown that in any constant domain first-order model, in any world, and any assignments of values, $\forall x \bx Fx \iff \bx \forall x Fx$ is valid. Barcan Formula is the only if direction of this conclusion.
+\end{proof}
+
+\item
+Consider the equivalent form of Barcan Formula:
+\[ \diam \exists x Fx \supset \exists x \diam Fx \]
+It blurs the lines between existence in possible worlds and existence in the actual world. We can interpret this formula as follows: In some possbile worlds, there exists a person who is my sister implies that there exists a person in the actual world who possibly is my sister. This is counterintuitive because it suggests that objects exist in possible world also exist in the actual world that has access to it.
+
+\item
+\begin{proof}
+We want to show that $\forall x \bx Fx \supset \bx \forall x Fx$ is invalid in some varying domain first-order models.
+
+\begin{center}
+\begin{tikzpicture}
+\node [draw,rectangle,minimum width=1cm,minimum height=1cm,label=left:$\Gamma$] (Gamma) {\large $a$};
+
+\node [draw,rectangle,minimum width=1cm,minimum height=1cm,below=of Gamma,label=left:$\Delta$,label=right:$\Vdash Fa$] (Delta) {\large $a,b$};
+
+\draw[->] (Gamma) -- (Delta);
+\end{tikzpicture}
+\end{center}
+
+This is a varying domain countermodal to Barcan Formula. In this model, we have
+\[ \mathcal{M}, \Delta \Vdash_{v} Fa \]
+Since $\Gamma$ can only access $\Delta$ where $\Delta \Vdash_{v} Fa$,
+\[ \mathcal{M}, \Gamma \Vdash_{v} \bx Fa \]
+$v'(x) = a$ is the only x-variant of $v$ at $\Gamma$, so
+\[ \mathcal{M}, \Gamma \Vdash_{v} \forall x \bx Fx \]
+On the other hand, suppose we had
+\[ \mathcal{M}, \Gamma \Vdash_{v} \bx \forall x Fx \]
+Subsequently,
+\[ \mathcal{M}, \Delta \Vdash_{v} \forall x Fx \]
+However, this is not true because $\Delta \not\Vdash_{v'} Fb$. Thus,
+\[ \mathcal{M}, \Gamma \not\Vdash_{v} \bx \forall x Fx \]
+Therefore, Barcan Formula is invalid in varying domain first-order models whose domains grow when moving to accessible worlds.
+\end{proof}
+\end{enumerate}

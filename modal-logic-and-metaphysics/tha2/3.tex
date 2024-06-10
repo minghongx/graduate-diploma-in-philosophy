@@ -1,0 +1,20 @@
+% F&M 1st ed. Ch. 10 Exercise 10.2.2
+\section*{QUESTION 3}
+\begin{proof}
+Let $\mathcal{M} = \langle \mathcal{G}, \mathcal{R}, \mathcal{D}, \mathcal{I} \rangle$ be a model.
+
+We want to show that, for any arbitrary valuation $v$ and possible world $w \in \mathcal{G}$, we have
+\[
+\mathcal{M}, w \Vdash_{v} \bx \langle \lambda x. \Phi(x) \rangle(c) \iff \mathcal{M}, w \Vdash_{v} \langle \lambda x. \bx \Phi(x) \rangle(c)
+\]
+To prove this, we proceed as follows:
+\begin{align*}
+\mathcal{M}, w \Vdash_{v} \bx \langle \lambda x. \Phi(x) \rangle(c)
+&\iff \mathcal{M}, w' \Vdash_{v} \langle \lambda x. \Phi(x) \rangle(c), \forall w' \colon w\mathcal{R}w' \\
+&\iff \mathcal{M}, w' \Vdash_{v'} \Phi(x), \forall w' \colon w\mathcal{R}w', \text{where $v' \sim_x v$ such that $v'(x) = \mathcal{I}(c, w')$} \\
+&\iff \mathcal{M}, w \Vdash_{v'} \bx \Phi(x), \text{where $v' \sim_x v$ such that $v'(x) = \mathcal{I}(c, w')$} \\
+\intertext{The singular term $c$ is rigid, which means for all possible world $w \in \mathcal{G}$, $\mathcal{I}(c, w)$ is the same if it is defined; accordingly, $\mathcal{I}(c, w') = \mathcal{I}(c, w)$, then}
+&\iff \mathcal{M}, w \Vdash_{v'} \bx \Phi(x), \text{where $v' \sim_x v$ such that $v'(x) = \mathcal{I}(c, w)$} \\
+&\iff \mathcal{M}, w \Vdash_{v} \langle \lambda x. \bx \Phi(x) \rangle(c)
+\end{align*}
+\end{proof}

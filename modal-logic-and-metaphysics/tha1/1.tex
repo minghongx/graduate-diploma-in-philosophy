@@ -1,0 +1,21 @@
+\section*{QUESTION 1}
+\begin{enumerate}[label=\alph*)]
+\item
+Modal axioms are formulas that are added to a modal logic system to capture certain intuitions about necessity, possibility, and other modal concepts. Possible worlds semantics provides a way to validate specific modal axioms: a modal axiom is valid if modal frames $\langle \mathcal{G}, \mathcal{R} \rangle$ whose accessibility relation $\mathcal{R}$ between worlds satisfies certain algebraic condition required by the axiom. Different modal axioms impose specific conditions on the accessibility relation. This means that, under possible worlds semantics, we can define modal logics by specifying sets of frames that meet various algebraic conditions so as to validate intended modal axioms and invalidate unintended modal axioms.
+
+\item
+Each axiom scheme is valid in frames that meet the corresponding algebraic condition.
+\begin{center}
+\begin{tblr}{
+  colspec={c|c},
+}
+Axiom Scheme & Algebraic Condition \\
+\hline[solid]
+(T) $\bx P \supset P $ & reflexive \\
+(B) $P \supset \bx\diam P$ & symmetric \\
+(S4) $\bx P \supset \bx\bx P$ & transitive \\
+(S5) $\diam P \supset \bx\diam P$ & Euclidean \\
+\end{tblr}
+\end{center}
+
+\end{enumerate}
