@@ -1,17 +1,16 @@
 # Take Home Assignment 1
 
-## Feedback from Quentin Parker Pharr
+## Feedback from Quentin Parker Pharr (Mark: 11.2)
 
 | Section | Mark
 | :-: | ---
 | [A](#section-a-the-mind-body-problem-i) | 10
 | [B](#section-b-the-mind-body-problem-ii) | 12
 | [C](#section-c-realism) | 11.5
-|   | 11.2
-
-![Frequency of Marks](./mark-freq/tha1.png)
 
 The author's responses are somewhat clear and somewhat well-written. The author answers all of the requisite questions, but some more than others, despite having enough words to elaborate and to be more precise in their writing and thinking. The author poses a number of critical points throughout. However, the point made in their Descartes section in response to the second sub-question was not developed enough and relied more on assertion than argument. Similarly, their discussion of Putnam's No Miracle's argument did not present the structure of the argument in a precise fashion, so much as listed the various aspects that Putnam is drawing from. In general, structure is essential in any writing - but especially philosophical writing about arguments. In the future, I hope that the author will use their words to greater effect and that they pay a bit more attention as well to grammar.
+
+![Frequency of Marks](./mark-freq/tha1.png)
 
 ## Section A: The Mind-Body Problem I
 

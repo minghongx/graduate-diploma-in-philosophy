@@ -1,15 +1,12 @@
 # Take Home Assignment 2
 
-## Feedback from Quentin Parker Pharr
+## Feedback from Quentin Parker Pharr (Mark: 13)
 
 | Section | Mark
 | :-: | ---
 | [A](#section-a-the-metaphysics-of-gender) | 12.5
 | [B](#section-b-the-metaphysics-of-race) | 13
 | [C](#section-c-the-existence-of-god) | 13.5
-|  | 13
-
-![Frequency of Marks](./mark-freq/tha2.png)
 
 In Section A, the author provides general and more specific examples of both internalist and externalist views on gender. They also provide critical feedback for both sets of views. However, the author's understanding of the distinction between them conflates internalism with externalism at one point based on one view alone and demonstrates that they only have a narrow conception of what the sets of views have in common, as the author does not seem to account for biological essentialist views as externalist views.
 
@@ -18,6 +15,8 @@ In Section B, the author provides the basics of Mills's reluctance to accepting 
 And lastly, in Section C, the author provides several objections to the Simple Analogy Argument and does a good job of characterizing them and pinpointing what aspects of the argument those objections are targeting. They even provide an interesting possibility for undermining premise four. However, the author does not engage in a substantive dialectic associated with the best objection, as the prompt demands. In this regard, the author does not anticipate any responses from interlocutors holding opposite views and only provides a general summary of why the argument fails.
 
 In the future, the author needs to be more careful in their reading of the prompts and they need to be more focused in their presentation, as even a bit of dialectic for discussions about the best objection would have helped their mark.
+
+![Frequency of Marks](./mark-freq/tha2.png)
 
 ## Section A: The Metaphysics of Gender
 

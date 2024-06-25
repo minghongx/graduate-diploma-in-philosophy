@@ -9,12 +9,11 @@ In natural theology God has been described as having several necessary attribute
 
 Is the concept of God involving these attributes coherent? Defend your answer.
 
-# Feedback from Quentin Parker Pharr
-
-**Mark: 10**
-![Frequency of Marks](./mark-freq/essay.png)
+# Feedback from Quentin Parker Pharr (Mark: 10)
 
 This essay is somewhat clear, somewhat well-written, and somewhat well-organized. The author provides a general summary of the various problems that come with God's purported necessary attributes. The author discusses most of these necessary attributes, rather than one or two of them. As a result, the author's discussion is wide-ranging and lacks depth and originality. The author needed to focus on one problem and structure their essay as a dialectic on that problem between various authors that were read. Moreover, the author is drawing on a whole palate of literatures - not explaining any of the terms involved or what is at stake (e.g. A-Theory versus B-Theory, future contingents). The author cannot simply run through these literatures; they must digest them diligently and set them forward on the page with consideration and with an eye to what can and cannot be done in 1500 words. Overall, what the author has attempted is way beyond 1500 words. In the future, they need to consult various philosophy writing resources in order to see how to manage scope and how to approach setting up a dialectic for them to engage in.
+
+![Frequency of Marks](./mark-freq/essay.png)
 
 # Incoherence of Divine Attributes
 
