@@ -16,8 +16,6 @@ And lastly, in Section C, the author provides several objections to the Simple A
 
 In the future, the author needs to be more careful in their reading of the prompts and they need to be more focused in their presentation, as even a bit of dialectic for discussions about the best objection would have helped their mark.
 
-![Frequency of Marks](./mark-freq/tha2.png)
-
 ## Section A: The Metaphysics of Gender
 
 ### Question 1: Internalism and Externalism

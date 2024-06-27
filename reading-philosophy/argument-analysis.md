@@ -10,8 +10,6 @@ You've done a really good job of indicating the overall aim of the paper given t
 
 A bit more could have been done to indicate the ways in which the different sub arguments you cover all fit in an overall narrative – as it stands the reader has to do some work to see why we're discussing different views and how they come together for the overall argument aim. It would also have been useful to indicate places where Haslanger is making assumptions or claims (i.e things that need to be defended as sub-arguments in the paper).
 
-![Frequency of Marks](./mark-freq/argument-analysis.png)
-
 ## Concepts and social practices are intertwined
 
 Premise 1: Concepts do not exist in isolation; they are deeply rooted in social practices.

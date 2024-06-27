@@ -12,8 +12,6 @@ The writing was generally clear and there was good engagement with some of the t
 A weakness of the essay was a lack of definition of artificial agent. This made it unclear what the scope of the aims of the essay were. If artificial agents are genuine artificial intelligence then it seems the problem collapses back into the same question of how we can define human-human trust. If it’s not AI then I need some idea of the scope of what and artificial agent can do in order to understand the force of some of your arguments. A little more structure on the different accounts of trust you considered/ would be considering would have also helped the reader follow along with some of the later arguments.
 A good effort and lots of interesting ideas and arguments packed in – just could have done with slowing down on some of them at times and really explaining and evaluating them further.
 
-![Frequency of Marks](./mark-freq/essay.png)
-
 ## Introduction
 
 Humans, in pursuit of meeting certain needs that manually operated artefacts could not fulfil, began to create entities with agency, known as artificial agents. With traditional agents, like humans and dogs, trust issues exist, such as the possibility that although humans can control dogs, the dogs might disobey and cause harm. Philosophers have questioned whether trust relationships can exist with artificial agents, as these entities lack certain qualities found in humans and animals, such as motivation, morality, and emotions, which are potentially essential elements of trust. In other words, the form of dependence between humans and artificial agents might only be mere reliance, not trust. In this essay, I will defend that the question of trust is still applicable to artificial agents.

@@ -10,8 +10,6 @@
 
 The presentation felt a bit disjointed this week. While it's fine to work on different aspects of the argument and divide the work in that way a bit more work on integrating the different parts of the presentation and drawing on each others work would have really helped the presentation be more cohesive.  I thought the logical analysis was a nice touch and was explained well – however it did take up a lot of time and meant that you didn't have sufficient time in the presentation to explore or develop some of the other parts of the paper in sufficient detail. I thought there were some really interesting points brought up at the end that led nicely into the Q and A and class discussion and it was a shame this was a bit rushed.
 
-![Frequency of Marks](./mark-freq/presentation1.png)
-
 ## [Slides](https://minghongx.github.io/graduate-diploma-in-philosophy/reading-philosophy-week7/) & [Handout](./presentation1-handout.pdf)
 
 ## Transcript

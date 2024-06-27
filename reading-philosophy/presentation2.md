@@ -8,8 +8,6 @@
 | **Critical engagement (40%):**<br>Have the presenters analysed, rather than merely described the texts? Have they highlighted problems, offered potential solutions/counter-claims, etc.? Have the presenters offered their own thoughts on the problems, and suggested 2 or more items of further reading? | You drew out the appeal to explanatory generality well.<br><br>Argument that the two forms of externalism are logically independent: thought this was broken down very well – clear argument for why you think explanatory generality is not an interesting one. | With the different criticisms a bit more could have been done to talk about the distinct yet connected features of the worries you've generated for the theory. |  |  |
 | **Delivery of presentation (20%):**<br>Does the presentation keep to time? Are visual aids effective and used appropriately? Does the presentation invite wider class discussion? Are presenters articulate and clear, and can they respond to questions? | The layout on the slides where we get a general explanation and then a break down of how that applies specifically in the Willimson and then the Clark and Chalmers views is really useful. | Could have had a bit of a better split of talking in the Q and A – this improved as the Q and A went on. |  |  |
 
-![Frequency of Marks](./mark-freq/presentation2.png)
-
 ## [Slides](https://minghongx.github.io/graduate-diploma-in-philosophy/reading-philosophy-week11/) & [Handout](./presentation2-handout.pdf)
 
 ## Transcript
