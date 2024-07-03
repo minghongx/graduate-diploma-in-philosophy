@@ -13,6 +13,47 @@ Is the concept of God involving these attributes coherent? Defend your answer.
 
 This essay is somewhat clear, somewhat well-written, and somewhat well-organized. The author provides a general summary of the various problems that come with God's purported necessary attributes. The author discusses most of these necessary attributes, rather than one or two of them. As a result, the author's discussion is wide-ranging and lacks depth and originality. The author needed to focus on one problem and structure their essay as a dialectic on that problem between various authors that were read. Moreover, the author is drawing on a whole palate of literatures - not explaining any of the terms involved or what is at stake (e.g. A-Theory versus B-Theory, future contingents). The author cannot simply run through these literatures; they must digest them diligently and set them forward on the page with consideration and with an eye to what can and cannot be done in 1500 words. Overall, what the author has attempted is way beyond 1500 words. In the future, they need to consult various philosophy writing resources in order to see how to manage scope and how to approach setting up a dialectic for them to engage in.
 
+## Further correspondence between Quentin and me
+
+Dear Quentin,
+
+I come from a different educational system and have never been exposed to philosophy before. I haven't been trained in philosophical or argumentative essay writing. I am not surprised by the grade you gave me; I had a vague sense that I didn't do well.
+> In the future, they need to consult various philosophy writing resources in order to see how to manage scope and how to approach setting up a dialectic for them to engage in.
+
+What writing resources do you recommend?
+
+> In general, structure is essential in any writing - but especially philosophical writing about arguments. In the future, I hope that the author will use their words to greater effect and that they pay a bit more attention as well to grammar.
+
+> In this regard, the author does not anticipate any responses from interlocutors holding opposite views and only provides a general summary of why the argument fails. In the future, the author needs to be more careful in their reading of the prompts and they need to be more focused in their presentation, as even a bit of dialectic for discussions about the best objection would have helped their mark.
+
+I'm having difficulty understanding the advice you gave me in THA1 and THA2, especially the terms
+- 'structure'
+- 'use their words to greater effect'
+- 'responses from interlocutors holding opposite views'
+- 'dialectic'
+- 'best objection'
+
+In addition, could you provide additional guidance on ways to improve and also some reference materials?
+
+Best,
+
+Minghong
+
+---
+
+Hey Minghong,
+
+These are normally questions that I would try to address during an office hour within the semester or with a student over email before the semester is essentially finished. But, I appreciate that your educational background is different, and I want you to have the resources you need to succeed. 
+
+Firstly, I would have you look over Jim Pryor's Guidelines for Writing a Philosophy Paper. They can be found online. I was given this template for my philosophy essays whenever I attended NYU and I found it very helpful. But, if you need in person help, I recommend CEED from the university, as they have a number of resources that can help you in terms of general academic writing. 
+
+Secondly, I apologize that my feedback might seem a bit terse - but, I have to mark at a particular pace and might not be able to express everything as concretely as I would like. I often have to summarize what I find from an essay rather than provide particulars for everything. But, if you would like, at the beginning of next semester, I can meet with you and we can go over the feedback so that you can have a better idea of what you need to do in order to improve. This will help you for future philosophy work and, likely, all of your other academic work as well. 
+
+Please feel free to send me an email early in the new semester if you would like to meet.
+
+In the meantime, I wish you rest and enjoyment over the break,  
+Quentin
+
 # Incoherence of Divine Attributes
 
 ## Introduction
