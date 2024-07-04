@@ -122,3 +122,68 @@ Sullins, J. (2020) ‘Trust in Robots’, In J. Simon (ed.) *The Routledge Handb
 Taddeo, M. (2010) ‘Modelling Trust in Artificial Agents, A First Step Toward the Analysis of e-Trust'. *Minds and Machines*, 20(2), pp. 243-257.
 
 Weckert, J. (2005) ‘Trust in Cyberspace’, In R. J. Cavalier (dd.) *The Impact of the Internet on our Moral Lives*.
+
+## Choosing an Essay Topic
+
+Dear PY3100 Students,
+
+I notice that some of you are choosing essay topics that are FAR TOO BROAD. That will mean your essay is a galloping survey of some doubtless interesting issues. Nothing will get properly developed.
+
+So, here are some (inter-related) tips:
+1. Pick a VERY focussed topic. Ideally, a pre-existing conversation in the literature that you can contribute to.
+
+2. But your voice has to be distinctive -- you don't want to be just saying "I agree with X". (Though you can seek to significantly modify a pre-existing view.)
+
+3. Better to over-focus than under-focus. It's easy to broaden a focussed topic but difficult to build the requisite focus into a broad topic.
+
+4. Think of yourself as a playwright writing a drama: 2-3 main characters, with tension and drama concerning their relationships. You are to offer a resolution (or just more drama perhaps).
+
+5. A big messy play with lots of characters, which don't get properly developed, or with a galloping story-line, is not going to cut it.
+
+6. Try out: [PhilPapers](https://philpapers.org). Select a topic of interest. Check out the sub-categories. Then start to peruse the titles and abstracts of significant/interesting papers -- to see if you can find a pre-existing conversation which you can significantly add to.
+
+Here is what I just did on PhilPapers:
+
+I pretended that I wanted to write on functionalism, analytical functionalism, or functional kinds. I just had some vague idea that maybe diseases are nit natural kinds but functional kinds.  
+So my vague goal was to defend the idea that mental illnesses are functional kinds.  
+So, I checked out PhilPapers.  
+I found: 1000+ papers on functionalism. Ouch!  
+I found 998 papers on Analytical Functionalism. Better!
+
+In fact I found 2 useful papers on Analytic Functionalism and Mental State Attribution:
+- [Analytic Functionalism](https://dx.doi.org/10.1002/9781118398593.ch32)
+- [Analytic Functionalism and Mental State Attribution](https://dx.doi.org/10.5840/philtopics201240217)
+
+But then I hit an impasse because nothing was coming up on Analytic Functionalism and Mental Illness.
+
+So I just tried googling "Analytic Functionalism Mental Illness".
+
+This yielded: [Foundations of Philosophical Functionalism](https://doi.org/10.1093/acrefore/9780190236557.013.493) (Another good background paper which mentions depression.)
+
+Then I came across the thesis of "Structural Functionalism" in the sphere of health and disease. This seems related but belongs to sociology. So there was a danger of getting sidetracked into issues in sociology.
+
+So I tried checking more search results...
+
+This just brought up more sociology results.
+
+So I changed tack and googled "Functional Kinds and Mental Illness".
+
+This yielded good results.
+
+Namely: I found a paper IN A PHILOSOPHY JOURNAL investigating the concept of mental illness in relation to the concepts of function and malfunction and proper function. The title "Malfunction and Mental Illness".
+
+The bibliography of this paper produced some good reading. This paper is my conversation! The one I am going to join.
+
+So I decided to anchor my essay topic here. It's not quite the functionalism/analytic functionalism ambition I started with. Nor is it the idea that mental illnesses are functional kinds (that could well be an unoccupied position in the literature -- so a PhD topic, a book, a research project).
+
+So: my topic became:
+
+Are Mental Illnesses a kind of Mental Malfunction?
+
+I had those who say: yes, those who say no, and those who say: Maybe, it depends,
+
+Then I started sketching out my acts and scenes (being careful not to get too deep into the what is a function debate.)
+
+I hope these tips help!
+
+Patrick
